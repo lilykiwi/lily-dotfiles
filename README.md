@@ -8,6 +8,12 @@ cd dotfiles
 ./install.sh
 ```
 
+## Software I Use
+
+A list of the software I use is available here: [SOFTWARE.md](SOFTWARE.md)
+
+This is useful for setting up my operating systems and settings in order to use these dotfiles and in order to replicate my workflow.
+
 ## Adding configs
 
 Put a file in the repository, then add a line to `install.sh` constructed like this:

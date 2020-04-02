@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 kitty +kitten icat ~/GitHub/Notebook/icat4.jpg
 
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
+alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=medium.css -a stylesdir=/home/char/GitHub/dotfiles"
 
 autoload -Uz compinit
 compinit

@@ -2067,9 +2067,9 @@ dl dt {
 }
 
 .imageblock {
-  border: 1px solid #d8d8d8;
-  margin-top: 3.125em;
-  margin-bottom: 3.125em;
+  border: 1px none;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   padding: 15px 15px 5px 15px;
 }
 .imageblock > .content {

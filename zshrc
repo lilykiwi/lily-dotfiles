@@ -11,8 +11,8 @@ source $ZSH/oh-my-zsh.sh
 kitty +kitten icat ~/Documents/Notebook/icat3.jpg
 
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
-alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=medium.css -a stylesdir=/home/char/GitHub/dotfiles"
-alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography -a stylesheet=medium.css -a stylesdir=/home/char/GitHub/dotfiles"
+alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=/home/char/Documents/dotfiles"
+alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=/home/char/Documents/dotfiles"
 
 autoload -Uz compinit
 compinit
@@ -25,3 +25,6 @@ plugins=(zsh-autosuggestions, git)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

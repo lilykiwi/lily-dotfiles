@@ -8,7 +8,7 @@ ZSH_THEME="gateau"
 
 source $ZSH/oh-my-zsh.sh
 
-kitty +kitten icat ~/Documents/Notebook/icat3.jpg
+kitty +kitten icat ~/Documents/notebook/icat3.jpg
 
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=/home/char/Documents/dotfiles"

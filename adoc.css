@@ -465,7 +465,7 @@ h6 {
   font-style: normal;
   color: #191919;
   text-rendering: optimizeLegibility;
-  margin-top: 1.25em;
+  margin-top: 1em;
   margin-bottom: 0.45em;
   line-height: 1.2125em;
 }
@@ -867,7 +867,6 @@ kbd kbd:last-child {
   color: black;
 }
 
-#header,
 #content,
 #footnotes,
 #footer {
@@ -901,14 +900,29 @@ kbd kbd:last-child {
 }
 
 #header {
-  margin-bottom: 2.5em;
+  width: 100vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  *zoom: 1;
+  position: relative;
+  padding-bottom: 2.5em;
+  background: #2f3033;
+}
+#header > .details {
+  max-width: 950px;
+  margin: auto;
 }
 #header > h1 {
   color: white;
   font-weight: bold;
   border-bottom: 1px solid #dddddd;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: -28px;
   padding-bottom: 32px;
+  max-width: 950px;
 }
 #header span {
   color: #191919;
@@ -953,6 +967,14 @@ kbd kbd:last-child {
 
 #toctitle {
   color: #191919;
+}
+
+#header #toctitle {
+  color: white;
+}
+
+#header #toc a {
+  color: #8b9aca;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -2001,25 +2023,24 @@ span.icon > [class*=" icon-"] {
   margin-right: -0.9375em;
 }
 
-body {
+/*body {
   background: linear-gradient(270deg, #2f3033 0%, #2f3033 100%) no-repeat 0 0/100%
     178px;
   background: -webkit-linear-gradient(270deg, #2f3033 0, #2f3033 100%) no-repeat
     0 0/100% 178px;
-}
+}*/
 
-#header {
-  margin-bottom: 4em;
-}
 #header > h1 {
   border-bottom: none;
   margin-bottom: -28px;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 #header span {
   color: white;
 }
 #header #toc {
+  max-width: 950px;
+  margin: auto;
   padding-top: 2em;
   margin-bottom: -4em;
 }

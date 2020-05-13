@@ -1,0 +1,132 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+import sys, json, os
+
+def sur (a):
+  return c.green + " (" + str(a) + ") " + c.end + c.bold
+
+class c:
+    header = '\033[95m'
+    blue = '\033[94m'
+    green = '\033[92m'
+    warning = '\033[93m'
+    fail = '\033[91m'
+    end = '\033[0m'
+    bold = '\033[1m'
+    underline = '\033[4m'
+
+PATH = os.getenv("HOME")
+
+if not os.path.exists(PATH + "/.cnote.json"):
+  file = open(PATH + "/.cnote.json", "w")
+  file.write("[]")
+  file.close()
+
+# Get terminal size for listing tasks
+rows, columns = os.popen('stty size', 'r').read().split()
+maxwidth = int(columns)-10
+
+# Maximum outputs for showall()
+maxshow = 10
+
+# Load json data
+file = open(PATH + "/.cnote.json","r")
+jsonData = json.loads(file.read())
+file.close()
+
+# Main switch function for args
+def main (argv):
+  if (len(argv) > 1):
+    if (argv[1] == "add"):
+      add(argv)
+    elif (argv[1] == "show"):
+      show(argv)
+    elif (argv[1] == "showall"):
+      showall()
+    elif (argv[1] == "remove"):
+      remove(argv)
+    elif (argv[1] == "removeall"):
+      removeall()
+    elif (argv[1] == "dev"):
+      print()
+    else:
+      showUsage()
+  else:
+    showUsage()
+
+def add(argv):
+  if (len(argv) > 2):
+    temp = ""
+    for i in range (2,len(argv)):
+      temp = temp + argv[i] + " "
+    temp = temp[:-1]
+    jsonData.append(temp)
+    print("Added note" + sur(len(jsonData)))
+    file = open(PATH + "/.cnote.json", "w")
+    file.write(json.dumps(jsonData))
+    file.close()
+  else:
+    print("Please specify a note to add")
+
+def show(argv):
+  if (len(argv) > 2):
+    i = int(argv[2]) - 1
+    if (len(jsonData) > i and i >= 0):
+      print(sur(i+1) + jsonData[i])
+    else:
+      print("No note exists with id" + sur(i+1))
+  else:
+    if (len(jsonData) > 0):
+      if (len(jsonData[0]) > maxwidth):
+        print(sur(1) + jsonData[0][0:maxwidth] + " ...")
+      else:
+        print(sur(1) + jsonData[0][0:maxwidth])
+    else:
+      print ("No notes to display.")
+
+def showall():
+  for i in range (0,len(jsonData)):
+    if (len(jsonData[i]) > maxwidth):
+      print(sur(i+1) + jsonData[i][0:maxwidth] + " ...")
+    else:
+      print(sur(i+1) + jsonData[i][0:maxwidth])
+  if (not len(jsonData) > 0):
+    print ("No notes to display.")
+
+def remove(argv):
+  if (len(argv) > 2):
+    i = int(argv[2])-1
+    if (len(jsonData) > i and i >= 0):
+      jsonData.pop(i)
+      print("Removed note" + sur(i+1))
+      file = open(PATH + "/.cnote.json", "w")
+      file.write(json.dumps(jsonData))
+      file.close()
+  else:
+    if (len(jsonData) > 0):
+      jsonData.pop(0)
+      print("Removed note" + sur(1))
+      file = open(PATH + "/.cnote.json", "w")
+      file.write(json.dumps(jsonData))
+      file.close()
+    else:
+      print("No note to remove.")
+
+def removeall():
+  print("Removed all notes.")
+  file = open(PATH + "/.cnote.json", "w")
+  file.write("[]")
+  file.close()
+
+def showUsage():
+  print("Usage:")
+  print("cnote add [words]  - Adds a note to the queue")
+  print("cnote show [id]    - Shows the note with the id specified")
+  print("cnote showall      - Shows the top 10 elements")
+  print("cnote remove [ids] - Removes any notes with the IDs specified")
+  print("                   - If no id specified, removes the topmost note")
+  print("cnote removeall    - Removes " + c.underline + "all notes.")
+
+if __name__ == "__main__":
+  main(sys.argv)

@@ -3,7 +3,7 @@
 
 #---------------------oh-my-zsh-------------------------------------------------
 # Path to your oh-my-zsh installation.
-export ZSH="/home/char/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # ZSH Theme, pretty self explanatory.
 ZSH_THEME="gateau"
 
@@ -22,13 +22,17 @@ plugins=(git)
 # Purges removed packages with residual configs
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 # Asciidoctor with bibliography, style, latexmath.
-alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=/home/char/Documents/ch-dotfiles -a stem=latexmath"
+alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/Documents/ch-dotfiles -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
-alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography -a stem=latexmath"
+alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography -r asciidoctor-mathematical"
 # Little alias for displaying images, `icat img.png`
 alias icat="kitty +kitten icat"
-# Little shortcut to restart shell
-alias restartShell="clear && exec zsh"
+# Little shortcut to restart shell then cd to the current dir
+alias restartShell="clear && exec zsh && cd ."
+
+hash -d u2=$HOME/Documents/a2-s2-college/U2
+hash -d u4=$HOME/Documents/a2-s2-college/U4
+hash -d u6=$HOME/Documents/a2-s2-college/U6
 
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"

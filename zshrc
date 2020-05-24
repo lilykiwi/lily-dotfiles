@@ -5,7 +5,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH Theme, pretty self explanatory.
-ZSH_THEME="gateau"
+ZSH_THEME="af-magic"
 
 source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit
@@ -30,9 +30,12 @@ alias icat="kitty +kitten icat"
 # Little shortcut to restart shell then cd to the current dir
 alias restartShell="clear && exec zsh && cd ."
 
-hash -d u2=$HOME/Documents/a2-s2-college/U2
 hash -d u4=$HOME/Documents/a2-s2-college/U4
-hash -d u6=$HOME/Documents/a2-s2-college/U6
+
+#---------------------Path Additions--------------------------------------------
+
+# Add this dotfile folder to path for cnote
+export PATH="$PATH:$HOME/Documents/lyla-dotfiles"
 
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
@@ -45,6 +48,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 #---------------------Fun Stuff-------------------------------------------------
 # Display cute image on launch
-icat ~/zsh.png
+icat ~/zsh.jpg
 echo "cnote to-do list:"
 cnote showall

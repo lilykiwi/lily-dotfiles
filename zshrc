@@ -24,7 +24,7 @@ alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print
 # Asciidoctor with bibliography, style, latexmath.
 alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/Documents/ch-dotfiles -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
-alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography -r asciidoctor-mathematical"
+alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
 # Little alias for displaying images, `icat img.png`
 alias icat="kitty +kitten icat"
 # Little shortcut to restart shell then cd to the current dir

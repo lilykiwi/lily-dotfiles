@@ -14,3 +14,4 @@ chmod 754 cnote
 create_link cnote    ~/.local/bin/    # Fun cnote script i made
 create_link   zshrc              ~/.                    # ZSH config (oh-my-zsh)
 create_link   gateau.zsh-theme   ~/.oh-my-zsh/themes/   # ZSH theme
+create_link   p10k.zsh           ~/.                    # p10k-zsh

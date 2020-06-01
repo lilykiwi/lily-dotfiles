@@ -30,7 +30,7 @@ plugins=(git)
 # Purges removed packages with residual configs
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 # Asciidoctor with bibliography, style, latexmath.
-alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/Documents/ch-dotfiles -a stem=latexmath"
+alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/Documents/lyla-dotfiles -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
 alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
 # Little alias for displaying images, `icat img.png`

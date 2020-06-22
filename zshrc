@@ -1,18 +1,5 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 #---------------------oh-my-zsh-------------------------------------------------
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# ZSH Theme, pretty self explanatory.
-#ZSH_THEME="af-magic"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source $ZSH/oh-my-zsh.sh
@@ -22,9 +9,6 @@ compinit
 kitty + complete setup zsh | source /dev/stdin
 
 plugins=(git)
-
-# commented for now, could be useful
-#setopt correct
 
 #---------------------Aliases---------------------------------------------------
 # Purges removed packages with residual configs
@@ -54,12 +38,17 @@ export NVM_DIR="$HOME/.nvm"
 # Ruby Version Manager to Path. Must be last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+#---------------------pyenv-----------------------------------------------------
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 #---------------------p10k------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#---------------------Fun Stuff-------------------------------------------------
-# Display cute image on launch - broken with p10k sadly
-# icat ~/zsh.png
-# echo "cnote to-do list:"
-# cnote showall
+#---------------------init------------------------------------------------------
+pyenv global 3.8.3
+rvm use 2.7.1

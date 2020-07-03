@@ -51,4 +51,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 #---------------------init------------------------------------------------------
 pyenv global 3.8.3
-rvm use 2.7.1
+tput setaf 50; fortune -s | cowsay -f turtle

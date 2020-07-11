@@ -41,4 +41,4 @@ ZLE_RPROMPT_INDENT=0
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
-fortune -s | cowsay -f turtle | lolcat -F 0.05 -S 420
+tput setaf 147; fortune -a -s | cowsay -f turtle

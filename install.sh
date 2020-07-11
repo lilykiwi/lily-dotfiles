@@ -36,6 +36,8 @@ else
   echo "sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)""
 fi
 
+git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
+
 # function  $1             $2   # details
 create_link alacritty.yml  ~/.  # Alacritty terminal config
 create_link zshrc          ~/.  # ZSH config (oh-my-zsh)

@@ -52,6 +52,7 @@
     #context                 # user@hostname
     #public_ip             # public IP address
     # =========================[ Line #1 ]=========================
+    ip                    # ip address and bandwidth usage for a specified network interface
     #newline                 # \n
     ip                    # ip address and bandwidth usage for a specified network interface
     #background_jobs         # presence of background jobs
@@ -1413,7 +1414,7 @@
   typeset -g POWERLEVEL9K_IP_CONTENT_EXPANSION='$P9K_IP_IP'
   # Show information for the first network interface whose name matches this regular expression.
   # Run `ifconfig` or `ip -4 a show` to see the names of all network interfaces.
-  typeset -g POWERLEVEL9K_IP_INTERFACE='e.*'
+  typeset -g POWERLEVEL9K_IP_INTERFACE='^(e|w).*'
   # Custom icon.
   # typeset -g POWERLEVEL9K_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
 

@@ -41,4 +41,4 @@ ZLE_RPROMPT_INDENT=0
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
-tput setaf 14; fortune -a -s | cowsay -f turtle
+tput setaf 14; fortune anarchism -s | cowsay -f turtle

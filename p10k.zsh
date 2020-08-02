@@ -53,6 +53,7 @@
     #public_ip             # public IP address
     # =========================[ Line #1 ]=========================
     #newline                 # \n
+    ip                    # ip address and bandwidth usage for a specified network interface
     #background_jobs         # presence of background jobs
     #direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
@@ -105,7 +106,6 @@
     newline
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
-    ip                    # ip address and bandwidth usage for a specified network interface
     # proxy                 # system-wide http/https/ftp proxy
     battery               # internal battery
     # wifi                  # wifi speed
@@ -575,7 +575,7 @@
   # Note: The name of this parameter doesn't reflect its meaning at all.
   # Note: If this parameter is set to true, it won't hide tools.
   # Tip:  Override this parameter for ${TOOL} with POWERLEVEL9K_ASDF_${TOOL}_PROMPT_ALWAYS_SHOW.
-  typeset -g POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=true
+  typeset -g POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=false
 
   # If set to false, hide tool versions that are equal to "system".
   #

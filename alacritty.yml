@@ -17,8 +17,7 @@ window:
     columns: 80
     lines: 48
   title: 100% real KiTTY
-
-dynamic_title: false
+  dynamic_title: false
 
 scrolling:
   history: 25000

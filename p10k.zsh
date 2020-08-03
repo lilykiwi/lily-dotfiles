@@ -54,7 +54,6 @@
     # =========================[ Line #1 ]=========================
     ip                    # ip address and bandwidth usage for a specified network interface
     #newline                 # \n
-    ip                    # ip address and bandwidth usage for a specified network interface
     #background_jobs         # presence of background jobs
     #direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)

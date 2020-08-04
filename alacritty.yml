@@ -37,13 +37,13 @@ font:
 
 colors:
   primary:
-    background: "#03171E"
+    background: "#1E1E1E"
     foreground: "#E3E7FF"
   cursor:
     text: "#000000"
     cursor: "#568bff"
   selection:
-    text: "#03171E"
+    text: "#1E1E1E"
     background: "#e6c547"
   normal:
     black: "#000000"

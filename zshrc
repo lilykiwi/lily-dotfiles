@@ -14,6 +14,8 @@ alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a st
 alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
 # Little shortcut to restart shell then cd to the current dir
 alias restartShell="clear && exec zsh --login && cd ."
+# pls
+alias pls='sudo $(fc -nl -1)'
 
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/lyla-dotfiles/scripts"
@@ -41,4 +43,13 @@ ZLE_RPROMPT_INDENT=0
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
-tput setaf 14; fortune anarchism -s | cowsay -f turtle
+tput setaf 6
+echo ""
+echo "                |\ | |  ||\ \ /(_~     |~)|_~|\/||_~|\/||~)|_~|~) "
+echo "                |~\|_|/\||~\ | ,_)     |~\|__|  ||__|  ||_)|__|~\ "
+echo ""
+echo "                   \ //~\| |    |\ |~)|_~    | ||\ ||/~\| ||_~"
+echo "                    | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__"
+echo ""
+echo "                 (J U S T   L I K E   E V E R Y O N E   E L S E)"
+echo ""

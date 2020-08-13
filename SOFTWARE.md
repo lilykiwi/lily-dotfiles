@@ -2,21 +2,17 @@
 
 ## From apt
 
-- Kitty (apt, kitty)
+- Alacritty (apt, alacritty)
 - Firefox (preinstalled)
 - Discord (apt, discord)
 - Steam (apt, steam-installer)
 - Telegram Desktop (apt, telegram-desktop)
 - Vscodium (apt, codium)
-- Checkra1n (apt, checkra1n)
 - Lutris (apt, lutris)
 - qBitTorrent (apt, qbittorrent)
 - Piper (apt, piper)
-- Gravit Designer (snap, gravit-designer)
-- bat (apt, bat)
-- uLauncher
-- RVM
+- batcat (apt, bat)
 - Aseprite (compiled from source)
-- Thunderbird
+- Thunderbird (apt, thunderbird)
 - Protonmail Bridge
-- Protonvpn
+- draw.io (apt, draw.io)

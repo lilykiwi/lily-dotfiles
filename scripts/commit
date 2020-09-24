@@ -1,4 +1,4 @@
 #!/bin/sh
 # -*- coding: utf-8 -*-
 
-git commit -m "$@" | devmoji --commit
+git commit -m `"$@" | devmoji --commit`

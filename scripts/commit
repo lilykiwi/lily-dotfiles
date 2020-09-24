@@ -3,4 +3,4 @@
 
 message=$(devmoji -t "$@")
 
-git commit -m $message
+git commit -m "$message"

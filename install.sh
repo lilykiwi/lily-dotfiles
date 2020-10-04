@@ -7,7 +7,7 @@ create_link () {
   then
     echo $2$1 exists
   else
-    echo "$2$1 doesn't exist"
+    echo "$2$1 doesn't exist, creating it"
   fi
   rm -f $2$1 && ln -s $dir/$1 $2$1
 }
@@ -38,7 +38,8 @@ fi
 
 git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
 
-# function  $1             $2   # details
-create_link alacritty.yml  ~/.  # Alacritty terminal config
-create_link zshrc          ~/.  # ZSH config (oh-my-zsh)
-create_link p10k.zsh       ~/.  # p10k-zsh
+# function  $1                $2   # details
+create_link alacritty.yml     ~/.  # Alacritty terminal config
+create_link zshrc             ~/.  # ZSH config (oh-my-zsh)
+create_link p10k.zsh          ~/.  # p10k-zsh
+create_link devmoji.config.js ~/  # Devmoji config

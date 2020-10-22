@@ -14,8 +14,8 @@
 
 window:
   dimensions:
-    columns: 80
-    lines: 48
+    columns: 100
+    lines: 32
   title: 100% real KiTTY
   dynamic_title: false
 

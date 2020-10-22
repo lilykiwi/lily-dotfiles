@@ -45,11 +45,17 @@ autoload -Uz compinit
 compinit
 tput setaf 49
 echo ""
-echo "               |\ | |  ||\ \ /(_~     |~)|_~|\/||_~|\/||~)|_~|~) "
-echo "               |~\|_|/\||~\ | ,_)     |~\|__|  ||__|  ||_)|__|~\ "
+echo "                          |\ | |  ||\ \ /(_~     |~)|_~|\/||_~|\/||~)|_~|~) "
+echo "                          |~\|_|/\||~\ | ,_)     |~\|__|  ||__|  ||_)|__|~\ "
 echo ""
-echo "                  \ //~\| |    |\ |~)|_~    | ||\ ||/~\| ||_~"
-echo "                   | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__"
+echo "                             \ //~\| |    |\ |~)|_~    | ||\ ||/~\| ||_~"
+echo "                              | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__"
 echo ""
-echo "                (J U S T   L I K E   E V E R Y O N E   E L S E)"
+echo "                           (J U S T   L I K E   E V E R Y O N E   E L S E)"
 echo ""
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi

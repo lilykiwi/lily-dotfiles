@@ -1,0 +1,13 @@
+#!/bin/bash
+
+get=$(curl -s -o /dev/null -D - 'https://firewall-auth.brighton.ac.uk:6082/php/uid.php?vsys=1&rule=2' -A 'WorldWideweb (NEXT)' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-GB,en;q=0.5' -H 'connection: keep-alive' -H 'upgrade-insecure-requests: 1')
+
+sessid=$("$get" | grep -oP "(?<=Set-Cookie: ).*(?=;)")
+
+post=$(curl -H "content-type: application/x-www-form-urlencoded" -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-GB,en;q=0.5' -H 'connection: keep-alive' -H 'content-length: 69' -H 'content-type: application/x-www-form-urlencoded' -H 'cookie: SESSID=f4MBAV+q13heR3tcAwNsAg==' -H 'host: firewall-auth.brighton.ac.uk:6082' -H 'origin: https://firewall-auth.brighton.ac.uk:6082' -H 'referer: https://firewall-auth.brighton.ac.uk:6082/php/uid.php?vsys=1&rule=2' -H 'upgrade-insecure-requests: 1' -H 'user-agent: WorldWideweb (NEXT)' -d "$UNILOGIN" https://firewall-auth.brighton.ac.uk:6082/php/uid.php\?vsys\=1\&rule\=2 --output -)
+
+if $(echo "$post" | grep -q "User Authenticated"); then
+  yad --title="Success" --skip-taskbar --sticky --timeout=10 --button=gtk-close --width=200
+else
+  yad --title="Failure!" --skip-taskbar --sticky --button=gtk-close --width=200
+fi

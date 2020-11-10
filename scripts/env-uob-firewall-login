@@ -1,0 +1,11 @@
+#!/bin/bash
+
+vars="$(cat /etc/environment)"
+
+if [[ $vars == *"inputStr"* ]]; then
+  echo "env var already exists!"
+else
+  echo "UNILOGIN=\"inputStr=&escapeUser=&preauthid=&user=$1&passwd=$2&ok=Login\"" | sudo tee -a /etc/environment
+  echo "set up script to autostart with uob-firewall,"
+  echo "install yad then relog :)"
+fi

@@ -1,4 +1,4 @@
-# should return ~/GitHub/dotfiles on my system
+# should return ~/summerysaturn/dotfiles on my system
 dir=$(readlink -f $(dirname $0))
 
 # deletes and symlinks
@@ -9,7 +9,7 @@ create_link () {
   else
     echo "$2$1 doesn't exist, creating it"
   fi
-  rm -f $2$1 && ln -s $dir/$1 $2$1
+  rm -rf $2$1 && ln -s $dir/$1 $2$1
 }
 
 if [ -e ~/.asdf ]
@@ -44,3 +44,5 @@ create_link zshrc             ~/.  # ZSH config (oh-my-zsh)
 create_link p10k.zsh          ~/.  # p10k-zsh
 create_link devmoji.config.js ~/   # Devmoji config
 create_link Xmodmap           ~/.  # Xmodmap for Keychron K6
+
+create_link vscode-workspaces ~/.  # vscode-workspaces

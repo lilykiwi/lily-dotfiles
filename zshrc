@@ -14,8 +14,10 @@ alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a st
 alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
 # Little shortcut to restart shell then cd to the current dir
 alias restartShell="clear && exec zsh --login && cd ."
-# pls
-alias pls='sudo $(fc -nl -1)'
+# redo last
+alias fuck='sudo $(fc -nl -1)'
+# restyle ls
+alias ls='ls -shN --color=auto --group-directories-first'
 
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/lyla-dotfiles/scripts"

@@ -43,6 +43,8 @@ create_link alacritty.yml     ~/.  # Alacritty terminal config
 create_link zshrc             ~/.  # ZSH config (oh-my-zsh)
 create_link p10k.zsh          ~/.  # p10k-zsh
 create_link devmoji.config.js ~/   # Devmoji config
-create_link Xmodmap           ~/.  # Xmodmap for Keychron K6
+create_link xinitrc           ~/.  # .xinitrc to load ~/.Xmodmap
+create_link Xmodmap           ~/.  # .Xmodmap for Keychron K6
 
 create_link vscode-workspaces ~/.  # vscode-workspaces
+

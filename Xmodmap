@@ -1,2 +1,10 @@
+! Add grave/tilde for capslock, delete for pageup
 keycode 66  = grave asciitilde
 keycode 110 = Delete
+
+! add mode switch for next block
+keycode 134 = Mode_switch
+
+! pound sign and e accent
+keycode 26 = e E eacute Eacute
+keycode 12 = 3 numbersign sterling

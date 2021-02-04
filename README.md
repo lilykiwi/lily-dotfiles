@@ -3,8 +3,8 @@
 Clone the repo then run the install script!
 
 ```sh
-git clone https://github.com/summerysaturn/lyla-dotfiles.git
-cd lyla-dotfiles
+git clone https://github.com/summerysaturn/char-dotfiles.git
+cd char-dotfiles
 ./install.sh
 ```
 

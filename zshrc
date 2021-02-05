@@ -18,6 +18,8 @@ alias restartShell="clear && exec zsh --login && cd ."
 alias fuck='sudo $(fc -nl -1)'
 # restyle ls
 alias ls='ls -shN --color=auto --group-directories-first'
+# systemd reboot to windows command
+alias windows='systemctl reboot --boot-loader-entry=auto-windows'
 
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/lyla-dotfiles/scripts"

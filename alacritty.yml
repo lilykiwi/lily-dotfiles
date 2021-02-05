@@ -16,8 +16,6 @@ window:
   dimensions:
     columns: 100
     lines: 32
-  title: 100% real KiTTY
-  dynamic_title: false
 
 scrolling:
   history: 25000
@@ -89,12 +87,6 @@ shell:
   program: /bin/zsh
   args:
     - --login
-
-url:
-  launcher:
-    program: xdg-open
-    args: []
-  modifiers: Control
 
 key_bindings:
   - { key: V, mods: Control, action: Paste }

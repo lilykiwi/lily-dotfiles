@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+efibootmgr -b 0002 -B
+efibootmgr -b 0003 -B
+efibootmgr -b 0004 -B
+efibootmgr -b 0005 -B
+efibootmgr -b 0006 -B
+efibootmgr -b 0009 -B
+efibootmgr -b 000A -B

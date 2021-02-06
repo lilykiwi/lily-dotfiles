@@ -9,7 +9,7 @@ plugins=(git vscode)
 # Purges removed packages with residual configs
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 # Asciidoctor with bibliography, style, latexmath.
-alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/lyla-dotfiles -a stem=latexmath"
+alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
 alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
 # Little shortcut to restart shell then cd to the current dir
@@ -22,7 +22,7 @@ alias ls='ls -shN --color=auto --group-directories-first'
 alias windows='systemctl reboot --boot-loader-entry=auto-windows'
 
 # Add this dotfile folder to path for cnote
-export PATH="$PATH:$HOME/summerysaturn/lyla-dotfiles/scripts"
+export PATH="$PATH:$HOME/summerysaturn/char-dotfiles/scripts"
 
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"

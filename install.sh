@@ -45,6 +45,6 @@ create_link p10k.zsh          ~/.  # p10k-zsh
 create_link devmoji.config.js ~/   # Devmoji config
 create_link xinitrc           ~/.  # .xinitrc to load ~/.Xmodmap
 create_link Xmodmap           ~/.  # .Xmodmap for Keychron K6
-
+create_link xinitrc           ~/.  # Initscript for Xmodmap
 create_link vscode-workspaces ~/.  # vscode-workspaces
 

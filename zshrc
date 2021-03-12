@@ -9,9 +9,9 @@ plugins=(git vscode)
 # Purges removed packages with residual configs
 alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 # Asciidoctor with bibliography, style, latexmath.
-alias adoc="asciidoctor -r asciidoctor-bibliography -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles -a stem=latexmath"
+alias adoc="asciidoctor -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles/old -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
-alias adocpdf="asciidoctor-pdf -r asciidoctor-bibliography"
+alias adocpdf="asciidoctor-pdf"
 # Little shortcut to restart shell then cd to the current dir
 alias restartShell="clear && exec zsh --login && cd ."
 # redo last
@@ -44,6 +44,9 @@ fpath=(${ASDF_DIR}/completions $fpath)
 
 ZLE_RPROMPT_INDENT=0
 
+#---------------------JavaFX----------------------------------------------------
+export PATH_TO_FX=/home/char/deps/javafx-sdk-15.0.1/lib
+
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
@@ -57,7 +60,7 @@ echo "                              | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__"
 echo ""
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi

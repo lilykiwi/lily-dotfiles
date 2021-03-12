@@ -1,0 +1,48 @@
+/* put your custom css here. */
+
+/*
+202020
+2C2C2C
+*/
+
+/* sidebar */
+.scroller-2TZvBN {
+  background-color: #202020;
+}
+
+/* server bar */
+
+.container-3w7J-x,
+.sidebar-2K8pFh,
+.panels-j1Uci_,
+.privateChannels-1nO12o,
+.scroller-1JbKMe {
+  background-color: #2c2c2c;
+}
+
+/* chat */
+
+.chat-3bRxxu,
+.container-1r6BKw.themed-ANHk51 {
+  background-color: #202020;
+}
+
+.theme-dark .children-19S4PO:after {
+  background: linear-gradient(90deg, rgba(54, 57, 63, 0) 0, #202020);
+}
+
+.theme-dark .form-2fGMdU:before {
+  background: linear-gradient(180deg, rgba(54, 57, 63, 0) 0, #202020);
+}
+
+/* searchbox */
+
+.searchBar-3dMhjb {
+  background-color: #2c2c2c;
+}
+
+/* chatbox */
+
+.scrollableContainer-2NUZem {
+  background-color: #2c2c2c;
+}

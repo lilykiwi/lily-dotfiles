@@ -12,30 +12,6 @@ create_link () {
   rm -rf $2$1 && ln -s $dir/$1 $2$1
 }
 
-if [ -e ~/.asdf ]
-then
-  echo "asdf is already installed! good!"
-else
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-  pushd ~/.asdf
-  git checkout "$(git describe --abbrev=0 --tags)"
-  popd
-  echo "Restart shell and run:"
-  echo "  asdf plugin add lua"
-  echo "  asdf install lua 5.3.5"
-  echo "  asdf plugin add ruby"
-  echo "  asdf install lua 2.7.1"
-  echo "  asdf plugin add python"
-  echo "  asdf install python 3.8.3"
-fi
-
-if [ -e ~/.oh-my-zsh ]
-then
-  echo "Oh-My-Zsh is already installed! good!"
-else
-  echo "sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)""
-fi
-
 git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
 
 # function  $1                $2   # details
@@ -48,3 +24,27 @@ create_link Xmodmap           ~/.  # .Xmodmap for Keychron K6
 create_link xinitrc           ~/.  # Initscript for Xmodmap
 create_link vscode-workspaces ~/.  # vscode-workspaces
 
+echo "please run the following scripts (if you haven't already):"
+if [ -e ~/.oh-my-zsh ]
+then
+  echo "Oh-My-Zsh is already installed! good!"
+else
+  echo "sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)""
+  echo "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+fi
+if [ -e ~/.emacs.d ]
+then
+  echo "Emacs is installed!"
+else
+  echo "sudo apt install emacs"
+  echo "git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d"
+fi
+if [ -e ~/.asdf ]
+then
+  echo "asdf is already installed! good!"
+else
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+  pushd ~/.asdf
+  git checkout "$(git describe --abbrev=0 --tags)"
+  popd
+fi

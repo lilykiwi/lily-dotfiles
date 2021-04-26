@@ -51,16 +51,11 @@ export PATH_TO_FX=/home/char/deps/javafx-sdk-15.0.1/lib
 autoload -Uz compinit
 compinit
 tput setaf 49
-echo ""
-echo "                          |\ | |  ||\ \ /(_~     |~)|_~|\/||_~|\/||~)|_~|~) "
-echo "                          |~\|_|/\||~\ | ,_)     |~\|__|  ||__|  ||_)|__|~\ "
-echo ""
-echo "                             \ //~\| |    |\ |~)|_~    | ||\ ||/~\| ||_~"
-echo "                              | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__"
-echo ""
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/lyla/deps/google-cloud-sdk-314.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
+echo "     _ __   ___   __ _  __ _  ___ _ __ ___"
+echo "    | '_ \ / _ \ / _\` |/ _\` |/ _ \ '__/ __|"
+echo "    | |_) | (_) | (_| | (_| |  __/ |  \__ \\"
+echo "    | .__/ \___/ \__, |\__, |\___|_|  |___/"
+echo "    | |           __/ | __/ |"
+echo "    |_|          |___/ |___/"
+echo ""

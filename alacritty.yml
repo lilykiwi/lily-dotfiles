@@ -15,7 +15,7 @@
 window:
   dimensions:
     columns: 80
-    lines: 16
+    lines: 24
   title: (this is definitely Fedora)
   padding:
     x: 4

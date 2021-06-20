@@ -16,7 +16,7 @@ window:
   dimensions:
     columns: 80
     lines: 24
-  title: (this is definitely Fedora)
+  title: nyaa
   padding:
     x: 4
     y: 4
@@ -33,13 +33,13 @@ scrolling:
 font:
   size: 13.0
   normal:
-    family: MesloLGS NF
+    family: Fira Code
     style: Regular
   bold:
-    family: MesloLGS NF
+    family: Fira Code
     style: Bold
   italic:
-    family: MesloLGS NF
+    family: Fira Code
     style: Italic
 
 colors:

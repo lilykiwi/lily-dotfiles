@@ -59,3 +59,4 @@ echo "    | .__/ \___/ \__, |\__, |\___|_|  |___/"
 echo "    | |           __/ | __/ |"
 echo "    |_|          |___/ |___/"
 echo ""
+export PATH=$HOME/.local/bin:$PATH

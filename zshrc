@@ -24,6 +24,10 @@ alias windows='systemctl reboot --boot-loader-entry=auto-windows'
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/char-dotfiles/scripts"
 
+# Add deno
+export DENO_INSTALL="/home/char/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -60,3 +64,4 @@ echo "    | |           __/ | __/ |"
 echo "    |_|          |___/ |___/"
 echo ""
 export PATH=$HOME/.local/bin:$PATH
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"

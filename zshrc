@@ -28,6 +28,12 @@ export PATH="$PATH:$HOME/summerysaturn/char-dotfiles/scripts"
 export DENO_INSTALL="/home/char/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# add local bin path
+export PATH=$HOME/.local/bin:$PATH
+
+# mon2cam stuff? i guess? lol
+alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -54,14 +60,13 @@ export PATH_TO_FX=/home/char/deps/javafx-sdk-15.0.1/lib
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
-tput setaf 49
+tput setaf 6
 
-echo "     _ __   ___   __ _  __ _  ___ _ __ ___"
-echo "    | '_ \ / _ \ / _\` |/ _\` |/ _ \ '__/ __|"
-echo "    | |_) | (_) | (_| | (_| |  __/ |  \__ \\"
-echo "    | .__/ \___/ \__, |\__, |\___|_|  |___/"
-echo "    | |           __/ | __/ |"
-echo "    |_|          |___/ |___/"
-echo ""
-export PATH=$HOME/.local/bin:$PATH
-alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
+echo "     __.----------.__"
+echo "     \`--.________.--'___.---.___"
+echo "          /  / __.--'-----------\`--.__"
+echo "         /  /==========================="
+echo "    .---'---\`---\`---..._______...---'"
+echo "    \`---/     (. . . . /"
+echo "     ,-'-------\`--------._    U.S.S. Rébecca    NCC-117412    Nebula Class"
+echo "    (_________________||_)"

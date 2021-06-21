@@ -12,6 +12,8 @@ create_link () {
   rm -rf $2$1 && ln -s $dir/$1 $2$1
 }
 
+dconf write /org/gnome/shell/extensions/panel-date-format/format "'SOL %j  /  %y-%m-%d  /  %R  /  %:z %Z'"
+
 git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
 
 # function  $1                $2   # details
@@ -28,7 +30,7 @@ if [ -e ~/.oh-my-zsh ]
 then
   echo "Oh-My-Zsh is already installed! good!"
 else
-  echo "sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)""
+  echo "sh -c \"$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)\""
   echo "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \${ZSH_CUSTOM:-\$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 fi
 if [ -e ~/.emacs.d ]

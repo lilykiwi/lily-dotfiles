@@ -24,6 +24,7 @@ create_link xinitrc           ~/.  # .xinitrc to load ~/.Xmodmap
 create_link Xmodmap           ~/.  # .Xmodmap for Keychron K6
 create_link xinitrc           ~/.  # Initscript for Xmodmap
 create_link vscode-workspaces ~/.  # vscode-workspaces
+create_link sxhkdrc           ~/.config/sxhkd # sxhkd
 
 echo "please run the following scripts (if you haven't already):"
 if [ -e ~/.oh-my-zsh ]

@@ -34,6 +34,10 @@ export PATH=$HOME/.local/bin:$PATH
 # mon2cam stuff? i guess? lol
 alias mon2cam="deno run --unstable -A -r -q https://raw.githubusercontent.com/ShayBox/Mon2Cam/master/src/mod.ts"
 
+
+bindkey -M emacs '^[[3;5~' kill-word
+bindkey '^H' backward-kill-word
+
 #---------------------Node JS---------------------------------------------------
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -62,11 +66,9 @@ autoload -Uz compinit
 compinit
 tput setaf 6
 
-echo "     __.----------.__"
-echo "     \`--.________.--'___.---.___"
-echo "          /  / __.--'-----------\`--.__"
-echo "         /  /==========================="
-echo "    .---'---\`---\`---..._______...---'"
-echo "    \`---/     (. . . . /"
-echo "     ,-'-------\`--------._    U.S.S. Rébecca    NCC-117412    Nebula Class"
-echo "    (_________________||_)"
+echo "                      .---.---.                                    _..._"
+echo "    ,_('--,          /   / \   \                                 .'   \`::."
+echo "      (.--; ,--')_,  \   \ /   /                      __        :       :::"
+echo "          | ;--.)     '-.-'-.-'                  ___.'  '.___   :       :::"
+echo "      .-. |.| .-.      _|_ _|_     im gay lol    ____________   \`.     .::'"
+echo "         \|\|/          |   |                                     \`-..:''"

@@ -99,5 +99,6 @@ shell:
 
 key_bindings:
   - { key: V, mods: Control, action: Paste }
+  - { key: Back, mods: Control, chars: "\b" }
 
 debug.persistent_logging: true

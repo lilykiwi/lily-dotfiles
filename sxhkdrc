@@ -1,3 +1,0 @@
-# negative -w arg to account for a border width (default: 100%)
-ctrl + `
-    tdrop -ma -w 400 -y "$PANEL_HEIGHT" -s dropdown alacritty

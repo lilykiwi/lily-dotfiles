@@ -1,6 +1,0 @@
-#!/bin/sh
-# -*- coding: utf-8 -*-
-
-message=$(devmoji -t "$@")
-
-git commit -m "$message"

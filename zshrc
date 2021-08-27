@@ -64,11 +64,11 @@ export PATH_TO_FX=/home/char/deps/javafx-sdk-15.0.1/lib
 #---------------------init------------------------------------------------------
 autoload -Uz compinit
 compinit
-tput setaf 6
 
-echo "                      .---.---.                                    _..._"
-echo "    ,_('--,          /   / \   \                                 .'   \`::."
-echo "      (.--; ,--')_,  \   \ /   /                      __        :       :::"
-echo "          | ;--.)     '-.-'-.-'                  ___.'  '.___   :       :::"
-echo "      .-. |.| .-.      _|_ _|_     im gay lol    ____________   \`.     .::'"
-echo "         \|\|/          |   |                                     \`-..:''"
+echo
+tput setaf 45  && echo -n "  ████████████████" && tput setaf 147 && echo -n "                 \e[3mlily-ceres\e[0m         " && tput setaf 166 && echo -n "        ████████████████" && echo
+tput setaf 213 && echo -n "  ████████████████" && tput setaf 147 && echo -n "                                    " && tput setaf 214 && echo -n "        ████████████████" && echo
+tput setaf 15  && echo -n "  ████████████████" && tput setaf 175 && echo -n "         welcome to the cutie zone! " && tput setaf 15  && echo -n "        ████████████████" && echo
+tput setaf 213 && echo -n "  ████████████████" && tput setaf 167 && echo -n "        are you in the sudoers file?" && tput setaf 206 && echo -n "        ████████████████" && echo
+tput setaf 45  && echo -n "  ████████████████" && tput setaf 147 && echo -n "                                    " && tput setaf 127 && echo -n "        ████████████████" && echo
+echo

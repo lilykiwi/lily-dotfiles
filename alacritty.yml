@@ -23,7 +23,7 @@ window:
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
-  dynamic_title: false
+  dynamic_title: true
 
 
 scrolling:
@@ -31,15 +31,15 @@ scrolling:
   multiplier: 4
 
 font:
-  size: 13.0
+  size: 14.0
   normal:
-    family: Fira Code
+    family: Cartograph CF Bold
     style: Regular
   bold:
-    family: Fira Code
-    style: Bold
+    family: Cartograph CF Bold
+    style: Italic
   italic:
-    family: Fira Code
+    family: Cartograph CF Bold
     style: Italic
 
 colors:

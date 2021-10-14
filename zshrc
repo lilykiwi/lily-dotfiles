@@ -6,8 +6,6 @@ VSCODE=code-insiders
 plugins=(git vscode)
 
 #---------------------Custom----------------------------------------------------
-# Purges removed packages with residual configs
-alias aptpurge="sudo apt-get remove --purge $(dpkg -l | grep '^iU' | awk '{print $2}')"
 # Asciidoctor with bibliography, style, latexmath.
 alias adoc="asciidoctor -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles/old -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
@@ -20,6 +18,8 @@ alias fuck='sudo $(fc -nl -1)'
 alias ls='ls -shN --color=auto --group-directories-first'
 # systemd reboot to windows command
 alias windows='systemctl reboot --boot-loader-entry=auto-windows'
+# alias code-insiders to code
+alias code="code-insiders"
 
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/char-dotfiles/scripts"

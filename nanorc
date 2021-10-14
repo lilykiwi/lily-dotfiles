@@ -1,0 +1,15 @@
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano-syntax-highlighting/*.nanorc"
+set titlecolor white,lightmagenta
+set tabsize 2
+set autoindent
+set tabstospaces
+set afterends
+set selectedcolor black,yellow
+set minibar
+set softwrap
+set numbercolor white,normal
+set keycolor italic,magenta,normal
+set functioncolor italic,white,normal
+set unix
+set linenumbers

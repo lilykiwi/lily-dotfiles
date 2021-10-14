@@ -9,6 +9,7 @@ create_link () {
   else
     echo "$2$1 doesn't exist, creating it"
   fi
+  mkdir -p $2
   rm -rf $2$1 && ln -s $dir/$1 $2$1
 }
 
@@ -18,6 +19,7 @@ git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo
 create_link alacritty.yml     ~/.  # Alacritty terminal config
 create_link zshrc             ~/.  # ZSH config (oh-my-zsh)
 create_link p10k.zsh          ~/.  # p10k-zsh
+create_link nanorc            ~/.config/nano/ # nano
 
 echo "please run the following scripts (if you haven't already):"
 if [ -e ~/.oh-my-zsh ]

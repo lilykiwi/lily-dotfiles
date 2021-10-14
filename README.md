@@ -3,8 +3,8 @@
 Clone the repo then run the install script!
 
 ```sh
-git clone https://github.com/summerysaturn/char-dotfiles.git
-cd char-dotfiles
+git clone https://github.com/lilykiwi/lily-dotfiles.git
+cd lily-dotfiles
 ./install.sh
 ```
 

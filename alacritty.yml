@@ -15,12 +15,10 @@
 window:
   dimensions:
     columns: 80
-    lines: 24
-  title: Alacritty
+    lines: 28
   padding:
-    x: 0
-    y: 0
-
+    x: 8
+    y: 8
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
   dynamic_title: true
@@ -28,7 +26,7 @@ window:
 
 scrolling:
   history: 25000
-  multiplier: 4
+  multiplier: 10
 
 font:
   size: 14.0
@@ -101,5 +99,3 @@ shell:
 key_bindings:
   - { key: V, mods: Control, action: Paste }
   - { key: Back, mods: Control, chars: "\b" }
-
-debug.persistent_logging: true

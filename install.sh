@@ -22,6 +22,8 @@ create_link nanorc            nanorc        ~/.config/nano/   # nano
 create_link polybar/config    config        ~/.config/polybar/ # polybar
 create_link polybar/launch.sh launch.sh     ~/.config/polybar/ # polybar
 create_link rofi/LilyRofi.rasi  LilyRofi.rasi   /usr/share/rofi/themes/   # rofi
+create_link rofi/config.rasi  config.rasi   ~/.config/rofi/   # rofi
+create_link compton/compton.conf  compton.conf   ~/.config/   # compton
 
 echo '      run:
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"

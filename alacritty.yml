@@ -29,7 +29,7 @@ scrolling:
   multiplier: 10
 
 font:
-  size: 14.0
+  size: 12.0
   normal:
     family: Cartograph CF Bold
     style: Regular

@@ -37,7 +37,7 @@ configuration {
 /*      filter: ;*/
 /*      dpi: -1;*/
 /*      threads: 0;*/
-      scroll-method: 1;
+/*      scroll-method: 1;*/
 /*      window-format: "{w}    {c}   {t}";*/
       click-to-exit: true;
       theme: "LilyRofi";

@@ -59,10 +59,6 @@ fpath=(${ASDF_DIR}/completions $fpath)
 #---------------------p10k------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/Documents/lyla-dotfiles/p10k.zsh.
-[[ ! -f ~/Documents/lyla-dotfiles/p10k.zsh ]] || source ~/Documents/lyla-dotfiles/p10k.zsh
-
 ZLE_RPROMPT_INDENT=0
 
 #---------------------JavaFX----------------------------------------------------

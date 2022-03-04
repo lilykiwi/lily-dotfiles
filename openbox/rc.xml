@@ -15,9 +15,9 @@
   </focus>
   <theme>
     <name>Ocha</name>
-    <titleLayout>CIL</titleLayout>
+    <titleLayout/>
     <keepBorder>no</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Cartograph CF Bold</name>
       <size>9</size>
@@ -56,7 +56,7 @@
     </font>
   </theme>
   <resize>
-    <drawContents>no</drawContents>
+    <drawContents>yes</drawContents>
     <popupShow>Always</popupShow>
     <popupPosition>Center</popupPosition>
     <popupFixedPosition>
@@ -65,7 +65,7 @@
     </popupFixedPosition>
   </resize>
   <margins>
-    <top>28</top>
+    <top>24</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -90,24 +90,6 @@
         <y>0</y>
         <height>100%</height>
         <width>50%</width>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>50%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>50%</width>
-        <height>50%</height>
       </action>
     </keybind>
     <!-- Media Controls-->
@@ -202,21 +184,20 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>firefox-nightly</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-n">
       <action name="Execute">
-        <command>networkmanager_dmenu</command>
+        <command>nm-connection-editor</command>
       </action>
     </keybind>
-    <!--
-    <keybind key="W-p">
+    <!-- Screenshot -->
+    <keybind key="W-S-S">
       <action name="Execute">
-        <command>color-gpick</command>
+        <command>escrotum -s -C</command>
       </action>
     </keybind>
-    -->
     <!-- Lockscreen -->
     <keybind key="W-l">
       <action name="Execute">
@@ -224,11 +205,6 @@
       </action>
     </keybind>
     <!-- Openbox -->
-    <!--
-    <keybind key="W-S-Escape">
-      <action name="Exit"/>
-    </keybind>
-    -->
     <keybind key="W-S-BackSpace">
       <action name="Restart"/>
     </keybind>
@@ -240,12 +216,6 @@
     </keybind>
     <keybind key="W-M">
       <action name="Iconify"/>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="ToggleMaximize"/>
-    </keybind>
-    <keybind key="A-F7">
-      <action name="ToggleDecorations"/>
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
@@ -277,12 +247,6 @@
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
-      </action>
-    </keybind>
-    <!-- Screenshot -->
-    <keybind key="W-S-S">
-      <action name="Execute">
-        <command>xfce4-screenshooter -r -c</command>
       </action>
     </keybind>
   </keyboard>
@@ -516,15 +480,13 @@
     </context>
   </mouse>
   <!-- ########################### Menu Settings ########################### -->
-  <menu>
-    <file>menu.xml</file>z
-    <hideDelay>400</hideDelay><middle>no</middle><submenuShowDelay>100</submenuShowDelay><submenuHideDelay>200</submenuHideDelay><applicationIcons>no</applicationIcons><manageDesktops>yes</manageDesktops>
-  </menu>
+  <menu><file>menu.xml</file>z
+    <hideDelay>400</hideDelay><middle>no</middle><submenuShowDelay>100</submenuShowDelay><submenuHideDelay>200</submenuHideDelay><applicationIcons>no</applicationIcons><manageDesktops>yes</manageDesktops></menu>
   <!-- ######################## Applications Rules ######################## -->
   <applications>
     <application class="*">
       <focus>yes</focus>
-      <decor>yes</decor>
+      <decor>no</decor>
       <position force="yes">
         <x>center</x>
         <y>center</y>
@@ -548,16 +510,16 @@
     <primaryMonitor/>
   </placement>
   <desktops>
-    <number>4</number>
+    <number>1</number>
     <names/>
-    <popupTime>875</popupTime>
+    <popupTime>0</popupTime>
   </desktops>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <stacking>Above</stacking>
-    <direction>Vertical</direction>
+    <direction>Horizontal</direction>
     <noStrut>no</noStrut>
     <autoHide>no</autoHide>
     <hideDelay>300</hideDelay>

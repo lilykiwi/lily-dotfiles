@@ -2,8 +2,8 @@
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/  file:///usr/share/openbox/menu.xsd">
   <menu id="root-menu" title="Menu" label="Openbox 3">
     <separator label="Main Menu"/>
-		<menu icon="&icons;/apps.png" id="app-menu" execute="obmenu-generator" label="Applications"/>
-		<menu icon="&icons;/settings.png" id="preferences" label="Preferences">
+		<menu id="app-menu" execute="obmenu-generator" label="Applications"/>
+		<menuid="preferences" label="Preferences">
 			<menu id="obconfig" label="Openbox">
 				<item label="Settings">
 					<action name="Execute">

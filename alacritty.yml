@@ -15,7 +15,7 @@
 window:
   dimensions:
     columns: 80
-    lines: 28
+    lines: 20
   padding:
     x: 8
     y: 8
@@ -29,7 +29,7 @@ scrolling:
   multiplier: 10
 
 font:
-  size: 12.0
+  size: 10.0
   normal:
     family: Cartograph CF Bold
     style: Regular
@@ -40,43 +40,43 @@ font:
     family: Cartograph CF Bold
     style: Italic
 
+# Catppuccin!
 colors:
+  # Default colors
   primary:
-    background: "#1e1e20"
-    foreground: "#E3E7FF"
+    background: '0x202124'
+    foreground: '0xF8F8FF'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: "#000000"
-    cursor: "#568bff"
-  selection:
-    text: "#1E1E1E"
-    background: "#e6c547"
+    text: '0x1E1D2F'
+    cursor: '0xF5E0DC'
+
+  # Normal colors
   normal:
-    black: "#000000"
-    red: "#eb3733"
-    green: "#8bbf56"
-    yellow: "#e6c547"
-    blue: "#568bff"
-    magenta: "#ab96ef"
-    cyan: "#56ef9f"
-    white: "#eaeaea"
+    black:   '0x6E6C7E'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
+  # Bright colors
   bright:
-    black:   '#666666'
-    red:     '#ff3334'
-    green:   '#9ec400'
-    yellow:  '#e7c547'
-    blue:    '#7aa6da'
-    magenta: '#b77ee0'
-    cyan:    '#54ced6'
-    white:   '#ffffff'
-  dim:
-    black:   '#000000'
-    red:     '#8c3336'
-    green:   '#7a8530'
-    yellow:  '#97822e'
-    blue:    '#506d8f'
-    magenta: '#80638e'
-    cyan:    '#497e7a'
-    white:   '#9a9a9a'
+    black:   '0x988BA2'
+    red:     '0xF28FAD'
+    green:   '0xABE9B3'
+    yellow:  '0xFAE3B0'
+    blue:    '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan:    '0x89DCEB'
+    white:   '0xD9E0EE'
+
+  indexed_colors:
+    - { index: 16, color: '0xF8BD96' }
+    - { index: 17, color: '0xF5E0DC' }
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"

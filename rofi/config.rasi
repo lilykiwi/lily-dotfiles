@@ -40,7 +40,6 @@ configuration {
 /*      scroll-method: 1;*/
 /*      window-format: "{w}    {c}   {t}";*/
       click-to-exit: true;
-      theme: "LilyRofi";
 /*      max-history-size: 25;*/
 /*      combi-hide-mode-prefix: false;*/
 /*      matching-negate-char: '-' /* unsupported */;*/
@@ -143,3 +142,5 @@ configuration {
       sorting-method:    "name";
   }
 }
+
+@theme "LilyRofi"

@@ -1,0 +1,52 @@
+conky.config = {
+    alignment = 'top_left',
+    background = false,
+    border_width = 20,
+    double_buffer = true,
+    draw_graph_borders = true,
+    font = 'Fira Code SemiBold:size=12',
+    gap_x = 80,
+    gap_y = 100,
+    minimum_height = 5,
+    minimum_width = 320,
+    maximum_width = 320,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    update_interval = 3.0,
+		short_units = true,
+}
+
+conky.text = [[
+${time %Y-%m-%d}
+${time %b}
+
+### CPU
+ CPU ${voffset -4}${hr 1}${voffset 0}$color
+
+### CPU Info
+${color ffac33}${voffset 5}Ryzen 7 5800X ${font Exo 2:light:size=20}${freq_g} GHz
+${voffset}${font Exo 2:size=12}${color ffac33}${cpu cpu1}%${goto 106}${cpu cpu2}%${goto 188}${cpu cpu3}%${goto 270}${cpu cpu4}%
+${voffset -2}${color ffac33}${cpubar cpu1 8,73}${goto 106}${cpubar cpu2 8,73}${goto 188}${cpubar cpu3 8,73}${goto 270}${cpubar cpu4 8,73}
+${voffset -2}${font Exo 2:size=12}${color ffac33}${cpu cpu5}%${goto 106}${cpu cpu6}%${goto 188}${cpu cpu7}%${goto 270}${cpu cpu8}%$font
+${voffset -2}${color ffac33}${cpubar cpu5 8,73}${goto 106}${cpubar cpu6 8,73}${goto 188}${cpubar cpu7 8,73}${goto 270}${cpubar cpu8 8,73}
+${voffset -2}${font Exo 2:size=12}${color ffac33}${cpu cpu9}%${goto 106}${cpu cpu10}%${goto 188}${cpu cpu11}%${goto 270}${cpu cpu12}%$font
+${voffset -2}${color ffac33}${cpubar cpu9 8,73}${goto 106}${cpubar cpu10 8,73}${goto 188}${cpubar cpu11 8,73}${goto 270}${cpubar cpu12 8,73}$color
+${voffset -2}${font Exo 2:size=12}${color ffac33}${cpu cpu13}%${goto 106}${cpu cpu14}%${goto 188}${cpu cpu15}%${goto 270}${cpu cpu16}%$font
+${voffset -2}${color ffac33}${cpubar cpu13 8,73}${goto 106}${cpubar cpu14 8,73}${goto 188}${cpubar cpu15 8,73}${goto 270}${cpubar cpu16 8,73}$color
+
+### Filesystem
+ Filesystem ${voffset -4}${hr 1}${voffset 0}$color
+
+### FS Stuff
+/      ${fs_free /} free
+${fs_bar /}
+/home  ${fs_free /home} free
+${fs_bar /home}
+]]

@@ -28,6 +28,9 @@ create_link openbox/rc.xml    rc.xml        ~/.config/openbox/ # openbox
 create_link openbox/menu.xml    menu.xml        ~/.config/openbox/ # openbox
 create_link betterlockscreenrc    betterlockscreenrc        ~/.config/ # openbox
 
+# directories (gen 2 dotfiles)
+create_link awesome           awesome      ~/.config/
+
 
 echo '      run:
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"

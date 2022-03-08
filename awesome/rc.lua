@@ -12,9 +12,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
--- Declarative object management
-local ruled = require("ruled")
-local menubar = require("menubar")
 
 --local gamelauncher = require("gamelauncher")
 
@@ -318,36 +315,7 @@ end)
 
 -- }}}
 
--- {{{ Rules
--- Rules to apply to new clients.
-ruled.client.connect_signal("request::rules", function()
-  -- All clients will match this rule.
-  ruled.client.append_rule {
-    id = "global",
-    rule = {},
-    properties = {
-      focus = awful.client.focus.filter,
-      raise = true,
-      screen = awful.screen.preferred,
-      placement = awful.placement.centered
-    }
-  }
-end)
-
--- }}}
-
 -- {{{ Notifications
-
-ruled.notification.connect_signal('request::rules', function()
-  -- All notifications will match this rule.
-  ruled.notification.append_rule {
-    rule = {},
-    properties = {
-      screen = awful.screen.preferred,
-      implicit_timeout = 5
-    }
-  }
-end)
 
 naughty.connect_signal("request::display", function(n)
   naughty.layout.box {

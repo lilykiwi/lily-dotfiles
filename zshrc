@@ -51,10 +51,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #---------------------asdf------------------------------------------------------
-. $HOME/.asdf/asdf.sh
+#. $HOME/.asdf/asdf.sh
 
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+#fpath=(${ASDF_DIR}/completions $fpath)
 
 #---------------------p10k------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

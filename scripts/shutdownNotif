@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-shutdown +10
-mpv /usr/share/sounds/Pop/stereo/alert/battery-low.oga &
-zenity --info --width=200 --text="Computer will shut down in 10 minutes."

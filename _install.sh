@@ -4,7 +4,7 @@ dir=$(readlink -f $(dirname $0))
 create_link () {
   if [ -e $3$2 ]
   then
-    echo "exists   $3$2"
+    echo "exists   $3$2, replacing"
   else
     echo "creating $3$2"
   fi
@@ -18,24 +18,7 @@ git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo
 create_link alacritty.yml     alacritty.yml ~/.               # Alacritty terminal config
 create_link zshrc             zshrc         ~/.               # ZSH config (oh-my-zsh)
 create_link p10k.zsh          p10k.zsh      ~/.               # p10k-zsh
-create_link nanorc            nanorc        ~/.config/nano/   # nano
-create_link polybar/config    config        ~/.config/polybar/ # polybar
-create_link polybar/launch.sh launch.sh     ~/.config/polybar/ # polybar
-create_link rofi/LilyRofi.rasi  LilyRofi.rasi   /usr/share/rofi/themes/   # rofi
-create_link rofi/config.rasi  config.rasi   ~/.config/rofi/   # rofi
-create_link compton/compton.conf  compton.conf   ~/.config/   # compton
-create_link openbox/rc.xml    rc.xml        ~/.config/openbox/ # openbox
-create_link openbox/menu.xml    menu.xml        ~/.config/openbox/ # openbox
-create_link betterlockscreenrc    betterlockscreenrc        ~/.config/ # openbox
+create_link config.rasi  config.rasi   ~/.config/rofi/   # rofi
 
 # directories (gen 2 dotfiles)
 create_link awesome           awesome      ~/.config/
-
-
-echo '      run:
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-pushd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)"
-popd'

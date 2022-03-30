@@ -53,8 +53,8 @@ cyclefocus = {
     move_mouse_pointer = false,
 
     -- How many entries should get displayed before and after the current one?
-    display_next_count = 10,
-    display_prev_count = 0,
+    display_next_count = 5,
+    display_prev_count = 5,
 
     -- Default preset to use for entries.
     -- `preset_for_offset` (below) gets added to it.
@@ -68,7 +68,6 @@ cyclefocus = {
     preset_for_offset = {
         -- Default callback, which will gets applied for all offsets (first).
         default = function (preset, args)
-            -- Default font and icon size (gets overwritten for current/0 index).
             preset.font = 'sans 12'
             preset.icon_size = dpi(48)
             preset.text = escape_markup(cyclefocus.get_client_title(args.client, false))
@@ -76,10 +75,9 @@ cyclefocus = {
 
         -- Preset for current entry.
         ["0"] = function (preset, args)
-            preset.font = 'sans 14'
+            preset.font = 'sans 16'
             preset.icon_size = dpi(48)
             preset.text = escape_markup(cyclefocus.get_client_title(args.client, true))
-            preset.text = preset.text .. " [#" .. args.idx .. "] "
             preset.text = '<b>' .. preset.text .. '</b>'
         end,
 
@@ -1052,10 +1050,10 @@ cyclefocus.cycle = function(startdirection_or_args, args)
         if not wbox_screen or wbox_screen ~= initial_screen then
             wbox_screen = initial_screen
             local wa = screen[wbox_screen].workarea
-            local w = 600
+            local w = 300
             wbox:geometry({
                 -- right-align.
-                x = math.ceil(1280 - 300),
+                x = math.ceil(1280 - 150),
                 width = w,
             })
         end

@@ -8,13 +8,15 @@ theme_path = gfs.get_themes_dir()
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(config_path .. "theme.lua")
 
+local variables = {}
+
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = "code-insiders"
-ulauncher = "ulauncher --hide-window"
-rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"
-picom = "picom --config " .. config_path .. "config/picom.conf"
-escrotum = "escrotum -s -C"
+variables.terminal = "alacritty"
+variables.editor = "code-insiders"
+variables.ulauncher = "ulauncher --hide-window"
+variables.rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"
+variables.picom = "picom --config " .. config_path .. "config/picom.conf"
+variables.escrotum = "escrotum -s -C"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -35,3 +37,5 @@ awful.layout.suit.fair
 -- awful.layout.suit.corner.sw,
 -- awful.layout.suit.corner.se,
 }
+
+return variables

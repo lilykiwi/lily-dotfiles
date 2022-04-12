@@ -1,6 +1,6 @@
 configuration {
-  modi: "window,run,ssh,drun";
-  font: "Cartograph CF Bold 14";
+  modi: "drun";
+  font: "Cartograph CF Bold Italic 11";
   location: 0;
   yoffset: -300;
   xoffset: 0;
@@ -14,12 +14,12 @@ configuration {
 /*      run-shell-command: "{terminal} -e {cmd}";*/
 /*      window-command: "wmctrl -i -R {window}";*/
 /*      window-match-fields: "all";*/
-icon-theme: "Colloid-grey";
-/*      drun-categories: "Development";*/
-/*      drun-show-actions: false;*/
-/*      drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+  icon-theme: "Colloid-grey";
+  drun-categories: "System,Audio,Internet,Office,Video,Settings,Development,Graphics,Multimedia,Network,System,Utility,Other";
+  drun-show-actions: false;
+//  drun-display-format: "{name} [<span weight='light' size='small'>{name}</span>]";
 /*      drun-url-launcher: "xdg-open";*/
-/*      disable-history: false;*/
+  disable-history: true;
 /*      ignored-prefixes: "";*/
 /*      sort: false;*/
 /*      sorting-method: "normal";*/
@@ -31,7 +31,7 @@ icon-theme: "Colloid-grey";
 /*      parse-hosts: false;*/
 /*      parse-known-hosts: true;*/
 /*      combi-modi: "window,run";*/
-/*      matching: "normal";*/
+  matching: "glob";
 /*      tokenize: true;*/
 /*      m: "-5";*/
 /*      filter: ;*/
@@ -147,7 +147,6 @@ icon-theme: "Colloid-grey";
 
 configuration {
   modi: "drun";
-  font: "Rubik 10";
   show-icons: true;
   icon-theme: "Inverse-black-dark";
   display-drun: "";
@@ -157,10 +156,12 @@ configuration {
 }
 
 * {
-  bg: #202124;
-  fg: #F8F8FF;
+  bg: #202124BB;
+  bg-light: #ffffff10;
+  transparent: #00000000;
+  fg: #ffffff;
   accent: #687363;
-  button: #28292D;
+  button: #202124FF;
   background-color: @bg;
   text-color: @fg;
 }
@@ -168,7 +169,7 @@ configuration {
 window {
 	transparency: "real";
 	height: 96%;
-  width: 35%;
+  width: 30%;
 	location: west;
 	x-offset: 3%;
 	y-offset: 0%;
@@ -181,8 +182,7 @@ textbox {
 	expand: false;
 	horizontal-align: 0.5;
   vertical-align: 0.5;
-  background-color: @button;
-  border-radius: 12px;
+  background-color: @transparent;
   text-color: @fg;
   font: "feather 17";
   padding: 0 1% 0;
@@ -192,39 +192,43 @@ entry {
 	placeholder: "Search";
 	expand: true;
 	padding: 2% 0;
-	background-color: @button;
+	background-color: @transparent;
   placeholder-color: @fg;
-	border-radius: 12px;
 	cursor: text;
 }
 
 inputbar {
 	children: [ textbox, entry ];
 	expand: false;
-	background-color:	@button;
-	border-radius: 12px;
+	background-color:	@bg-light;
+	border-radius: 15px;
 }
 
 listview {
-  columns: 6;
+  columns: 5;
   cycle: true;
   dynamic: true;
+  background-color: @transparent;
   layout: vertical;
 }
 
 mainbox {
   children: [ inputbar, listview ];
   spacing: 2%;
+  background-color: @transparent;
   padding: 2% 1%;
 }
 
 element {
   orientation: vertical;
-  padding: 1.45833% 0%;
+  padding: 0.9% 0%;
+	background-color:	@transparent;
+  margin: 2px;
 }
 
 element-icon {
-  size: 72px;
+  size: 96px;
+  background-color: @transparent;
   horizontal-align: 0.5;
 }
 
@@ -232,16 +236,20 @@ element-text {
   expand: true;
   horizontal-align: 0.5;
   vertical-align: 0.5;
-  margin: 0.5% 0.5% -0.5% 0.5%;
+  background-color: @transparent;
+  margin: 0 0.75% 0.5% 0.75%;
 }
 
 element-text,
 element-icon {
-  background-color: inherit;
+  background-color: @transparent;
   text-color: inherit;
 }
 
 element selected {
-  background-color: @button;
+  background-color: @bg-light;
   border-radius: 6px;
+	border-radius: 15px;
+  border: 4px;
+  border-color: @fg;
 }

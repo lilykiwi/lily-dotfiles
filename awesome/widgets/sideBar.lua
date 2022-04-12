@@ -72,7 +72,23 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- Each screen has its own tag table.
   -- TODO: move this to rc or something
-	awful.tag({ "dev","" }, s, awful.layout.layouts[1])
+  awful.tag.add("alpha", {
+    screen = s,
+    layout = awful.layout.suit.floating,
+    selected = true,
+  })
+  awful.tag.add("beta", {
+    screen = s,
+    layout = awful.layout.suit.floating,
+  })
+  awful.tag.add("gamma", {
+    screen = s,
+    layout = awful.layout.suit.floating,
+  })
+  awful.tag.add("delta", {
+    screen = s,
+    layout = awful.layout.suit.floating,
+  })
 
 	-- Create a promptbox for each screen
 	s.mypromptbox = awful.widget.prompt()
@@ -123,6 +139,7 @@ awful.screen.connect_for_each_screen(function(s)
 			-- buttons
 			Launcher,
 			s.mytaglist,
+      --s.gameButton,
 			s.mypromptbox,
 		},
 		s.nothing, -- Middle widgets

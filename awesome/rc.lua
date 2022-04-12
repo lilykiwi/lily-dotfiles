@@ -12,3 +12,6 @@ require("modules.signals")
 
 -- import widgets
 require("widgets.sideBar")
+
+-- start things!
+require("modules.autostart")

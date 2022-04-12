@@ -25,14 +25,22 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(24)
+theme.useless_gap   = dpi(16)
 theme.border_width  = dpi(0)
 
 -- Variables set for theming notifications:
--- notification_font
--- notification_[bg|fg]
--- notification_[width|height|margin]
--- notification_[border_color|border_width|shape|opacity]
+theme.notification_font = "Proxima Nova 8"
+theme.notification_bg = "#28292D"
+theme.notification_fg = theme.fg_normal
+theme.notification_width = dpi(300)
+theme.notification_height = dpi(48)
+theme.notification_max_width = dpi(300)
+theme.notification_max_height = dpi(48)
+theme.notification_margin = dpi(10)
+theme.notification_border_color = theme.bg_normal
+theme.notification_border_width = dpi(0)
+--theme.notification_shape =
+theme.notification_opacity = 1
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]

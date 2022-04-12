@@ -1,5 +1,5 @@
-require("awful")
-require("naughty")
+local awful = require("awful")
+local naughty = require("naughty")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to

@@ -1,3 +1,3 @@
-require("variables")
+local variables = require("modules.variables")
 
-awful.spawn(picom)
+awful.spawn(variables.picom)

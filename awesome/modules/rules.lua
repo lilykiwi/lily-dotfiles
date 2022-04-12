@@ -1,6 +1,7 @@
 -- import awful
 local awful = require("awful")
 local beautiful = require("beautiful")
+local naughty = require("naughty")
 
 -- import local file keymap.lua to variable keymap
 local keymap = require("modules.keymap")
@@ -46,7 +47,32 @@ awful.rules.rules = { -- All clients will match this rule.
  },
  properties = {
    width = 650,
-   height = 1200
+   height = 1200,
+   y = 100
  }
-}}
+}, -- set vscode to a constant width and height
+{
+  rule = {
+    name = "Visual Studio Code"
+  },
+  properties = {
+    width = 1000,
+    height = 1300,
+    y = 50
+  }
+ }}
 -- }}}
+
+naughty.config.defaults = {
+  timeout = 5,
+  screen = 1,
+  ontop = true,
+  margin = 10,
+  border_width = 0,
+  position = "bottom_left",
+  height = 48,
+  width = 300,
+  font = "Proxima Nova 8",
+  fg = beautiful.fg_normal,
+  bg = beautiful.bg_normal,
+}

@@ -2,6 +2,8 @@ local awful = require("awful")
 local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local cyclefocus = require('cyclefocus')
+local variables = require("modules.variables")
+
 
 -- {{{ Key bindings
 
@@ -49,8 +51,8 @@ end, {
   description = "focus previous by index",
   group = "client"
 }), --
-awful.key({modkey, "Shift"}, "S", function()
-  awful.spawn(escrotum)
+awful.key({modkey, "Shift"}, "s", function()
+  awful.spawn(variables.escrotum)
 end, {
   description = "screenshot with escrotum -s -C",
   group = "launcher"
@@ -114,7 +116,7 @@ end), --
 -- ###################### Standard program ######################
 -- open a terminal
 awful.key({modkey}, "Return", function()
-  awful.spawn(terminal)
+  awful.spawn(variables.terminal)
 end, {
   description = "open a terminal",
   group = "launcher"
@@ -125,11 +127,11 @@ awful.key({modkey, "Shift"}, "r", awesome.restart, {
   group = "awesome"
 }), --
 -- quit awesome
--- awful.key({modkey, "Shift"}, "q", awesome.quit, {
---  description = "quit awesome",
---  group = "awesome"
--- }),
--- increase master width factor
+awful.key({modkey, "Shift"}, "p", awesome.quit, {
+  description = "quit awesome",
+  group = "awesome"
+}), --
+--increase master width factor
 awful.key({modkey}, "l", function()
   awful.tag.incmwfact(0.05)
 end, {
@@ -208,7 +210,7 @@ end, {
 }), --
 -- launcher
 awful.key({modkey}, "space", function()
-  awful.spawn(rofi)
+  awful.spawn(variables.rofi)
 end, {
   description = "launch rofi",
   group = "launcher"

@@ -1,6 +1,8 @@
 {
   "Lua.diagnostics.globals": [
     "client",
-    "screen"
+    "screen",
+    "awesome",
+    "hotkeys_popup"
   ]
 }

@@ -58,10 +58,10 @@ local function set_wallpaper(s)
 	end
 end
 
-local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
-local net_widgets = require("net_widgets")
-local net_wireless = net_widgets.wireless({ interface = "enp5s0" })
+--local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+--local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+--local net_widgets = require("net_widgets")
+--local net_wireless = net_widgets.wireless({ interface = "enp5s0" })
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
@@ -69,26 +69,6 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
 	set_wallpaper(s)
-
-	-- Each screen has its own tag table.
-  -- TODO: move this to rc or something
-  awful.tag.add("alpha", {
-    screen = s,
-    layout = awful.layout.suit.floating,
-    selected = true,
-  })
-  awful.tag.add("beta", {
-    screen = s,
-    layout = awful.layout.suit.floating,
-  })
-  awful.tag.add("gamma", {
-    screen = s,
-    layout = awful.layout.suit.floating,
-  })
-  awful.tag.add("delta", {
-    screen = s,
-    layout = awful.layout.suit.floating,
-  })
 
 	-- Create a promptbox for each screen
 	s.mypromptbox = awful.widget.prompt()
@@ -147,21 +127,20 @@ awful.screen.connect_for_each_screen(function(s)
 			fill_space = false,
 			spacing = 8,
 			layout = wibox.layout.fixed.vertical,
-			-- buttons
-			battery_widget({
-				path_to_icons = "/usr/share/icons/Papirus-Dark/",
-			}),
-      wibox.container.margin(
-				net_widgets.indicator({
-					interfaces = { "enp5s0", "enp42s0" },
-					timeout = 5,
-					popup_position = "bottom_left",
-				}),
-				12,12,12,12
-			),
-			wibox.container.place(volume_widget({
-				widget_type = "icon_and_text",
-			})),
+			--battery_widget({
+		        --	path_to_icons = "/usr/share/icons/Papirus-Dark/",
+			--}),
+                        --wibox.container.margin(
+			--	net_widgets.indicator({
+			--		interfaces = { "enp5s0", "enp42s0" },
+			--		timeout = 5,
+			--		popup_position = "bottom_left",
+			--	}),
+			--	12,12,12,12
+			--),
+			--wibox.container.place(volume_widget({
+		        --	widget_type = "icon_and_text",
+			--})),
 			-- wibox.container.place(systemTray),
 			textclock,
 			wibox.container.margin(s.mylayoutbox, 8, 8, 0, 8),

@@ -14,9 +14,9 @@ plugins=(git vscode)
 
 #---------------------Custom----------------------------------------------------
 # Asciidoctor with bibliography, style, latexmath.
-alias adoc="asciidoctor -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles/old -a stem=latexmath"
+#alias adoc="asciidoctor -a stylesheet=adoc.css -a stylesdir=$HOME/summerysaturn/char-dotfiles/old -a stem=latexmath"
 # Asciidoctor-pdf with bibliography, latexmath.
-alias adocpdf="asciidoctor-pdf"
+#alias adocpdf="asciidoctor-pdf"
 # Little shortcut to restart shell then cd to the current dir
 alias restartShell="clear && exec zsh --login && cd ."
 # redo last
@@ -24,9 +24,9 @@ alias fuck='sudo $(fc -nl -1)'
 # restyle ls
 alias ls='ls -shN --color=auto --group-directories-first'
 # systemd reboot to windows command
-alias windows='systemctl reboot --boot-loader-entry=auto-windows'
+#alias windows='systemctl reboot --boot-loader-entry=auto-windows'
 # alias code-insiders to code
-alias code="code-insiders"
+#alias code="code-insiders"
 
 # Add this dotfile folder to path for cnote
 export PATH="$PATH:$HOME/summerysaturn/char-dotfiles/scripts"

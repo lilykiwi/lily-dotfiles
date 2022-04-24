@@ -11,7 +11,13 @@ require("modules.errorHandling")
 require("modules.signals")
 
 -- import widgets
-require("widgets.sideBar")
+--require("widgets.sideBar")
 
 -- start things!
 require("modules.autostart")
+
+awful.tag.add("alpha", {
+  screen = s,
+  layout = awful.layout.suit.floating,
+  selected = true,
+})

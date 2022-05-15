@@ -10,7 +10,11 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 VSCODE=code-insiders
-plugins=(git vscode)
+plugins=(
+  git
+  vscode
+  asdf
+)
 
 #---------------------Custom----------------------------------------------------
 # Asciidoctor with bibliography, style, latexmath.
@@ -75,3 +79,4 @@ tput setaf 15  && echo -n "  ████████████████" &
 tput setaf 213 && echo -n "  ████████████████" && tput setaf 167 && echo -n "        are you in the sudoers file?" && tput setaf 206 && echo -n "        ████████████████" && echo
 tput setaf 45  && echo -n "  ████████████████" && tput setaf 147 && echo -n "                                    " && tput setaf 127 && echo -n "        ████████████████" && echo
 echo
+. $HOME/.asdf/asdf.sh

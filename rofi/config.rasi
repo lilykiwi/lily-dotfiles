@@ -168,11 +168,11 @@ configuration {
 
 window {
 	transparency: "real";
-	height: 96%;
+	height: 86%;
   width: 30%;
-	location: west;
-	x-offset: 3%;
-	y-offset: 0%;
+	location: north;
+	x-offset: 0%;
+	y-offset: 5%;
 }
 
 prompt { enabled: false; }

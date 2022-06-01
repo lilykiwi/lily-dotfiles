@@ -16,7 +16,8 @@
 #
 #xfce-mcs-manager &
 
-polybar --config=~/.config/polybar/config.ini main &
-picom --config ~/lilykiwi/lily-dotfiles/awesome/config/picom.conf &
+picom &
 ulauncher &
-nitrogen --set-zoom-fill pictures/wallpaper/wallhaven-72lj1o.jpg &
+nitrogen --set-zoom-fill pictures/wallpaper/wallhaven-l3pl3l.png &
+plank &
+polybar --config=~/.config/polybar/config.ini main &

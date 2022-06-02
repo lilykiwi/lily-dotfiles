@@ -217,42 +217,13 @@
         </finalactions>
       </action>
     </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-Right">
-      <action name="DirectionalCycleWindows">
-        <bar>no</bar>
-        <raise>yes</raise>
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="DirectionalCycleWindows">
-        <bar>no</bar>
-        <raise>yes</raise>
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="DirectionalCycleWindows">
-        <bar>no</bar>
-        <raise>yes</raise>
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="DirectionalCycleWindows">
-        <bar>no</bar>
-        <raise>yes</raise>
-        <direction>down</direction>
-      </action>
-    </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="W-Return">
       <action name="Execute">
         <command>alacritty</command>
       </action>
     </keybind>
-    <keybind key="A-Space">
+    <keybind key="C-Home">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
@@ -633,7 +604,6 @@
     <application class="*">
       <decor>no</decor>
     </application>
-
     <application name="alacritty">
       <!-- width 576, height 1206 -->
       <width>576</width>

@@ -11,6 +11,7 @@ require("modules.errorHandling")
 require("modules.signals")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
+local variables = require("modules.variables")
 
 beautiful.init(config_path .. "theme.lua")
 
@@ -35,7 +36,8 @@ require("widgets.topbar")
 require("widgets.desktopBackground")
 
 -- start things!
-require("modules.autostart")
+awful.spawn(variables.picom)
+awful.spawn(variables.ulauncher)
 
 awful.tag.add("primary", {
   screen = s,

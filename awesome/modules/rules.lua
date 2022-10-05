@@ -45,7 +45,8 @@ awful.rules.rules = { -- All clients will match this rule.
 {
   rule_any = {
     instance = {
-      "catapult"
+      "catapult",
+      "ulauncher"
     }
   },
   properties = {

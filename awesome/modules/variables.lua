@@ -14,7 +14,7 @@ variables.terminal = "alacritty"
 variables.editor = "code-insiders"
 variables.ulauncher = "ulauncher --hide-window"
 variables.rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"
-variables.picom = "picom --xrender-sync-fence --config " .. config_path .. "config/picom.conf"
+variables.picom = "picom --xrender-sync-fence"
 variables.screenshot = "shotgun $(hacksaw -f '-i %i -g %g') - | xclip -t 'image/png' -selection clipboard"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.

@@ -1,5 +1,0 @@
-#!/bin/sh
-# -*- coding: utf-8 -*-
-# Lily <lilykiwi9911@pm.me> twt: @lilykiwi_ disc: @lilykiwi#9911
-
-mogrify -colors 64 -strip ./*

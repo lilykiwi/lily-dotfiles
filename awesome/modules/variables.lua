@@ -6,7 +6,6 @@ theme_path = gfs.get_themes_dir()
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(config_path .. "theme.lua")
 
 local variables = {}
 
@@ -15,8 +14,8 @@ variables.terminal = "alacritty"
 variables.editor = "code-insiders"
 variables.ulauncher = "ulauncher --hide-window"
 variables.rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"
-variables.picom = "picom --config " .. config_path .. "config/picom.conf"
-variables.escrotum = "escrotum -s -C"
+variables.picom = "picom --xrender-sync-fence --config " .. config_path .. "config/picom.conf"
+variables.screenshot = "shotgun $(hacksaw -f '-i %i -g %g') - | xclip -t 'image/png' -selection clipboard"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {

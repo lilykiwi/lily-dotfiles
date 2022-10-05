@@ -14,7 +14,7 @@
 
 window:
   dimensions:
-    columns: 70
+    columns: 80
     lines: 60
   padding:
     x: 8
@@ -22,7 +22,6 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
   dynamic_title: true
-  opacity: 0.8
 
 
 scrolling:
@@ -32,13 +31,13 @@ scrolling:
 font:
   size: 10.0
   normal:
-    family: Cartograph CF Bold
+    family: Ellograph CF
     style: Regular
   bold:
-    family: Cartograph CF Bold
-    style: Italic
+    family: Ellograph CF Bold
+    style: Regular
   italic:
-    family: Cartograph CF Bold
+    family: Ellograph CF Bold
     style: Italic
 
 # Catppuccin!

@@ -12,10 +12,10 @@ local variables = require("modules.variables")
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
-altkey = "Mod1"
+local modkey = "Mod4"
+local altkey = "Mod1"
 
-globalkeys = gears.table.join( --
+local globalkeys = gears.table.join( --
 -- ###################### Main Bindings ######################
 -- show help
 awful.key({modkey}, "s", hotkeys_popup.show_help, {
@@ -52,9 +52,15 @@ end, {
   group = "client"
 }), --
 awful.key({modkey, "Shift"}, "s", function()
-  awful.spawn(variables.escrotum)
+  awful.spawn.with_shell("flameshot gui")
 end, {
-  description = "screenshot with escrotum -s -C",
+  description = "flameshot",
+  group = "launcher"
+}),
+awful.key({modkey, "Shift"}, "c", function()
+  awful.spawn.with_shell("colorpicker --short --one-shot | tr -d '#\n' | xsel -b")
+end, {
+  description = "colorpicker",
   group = "launcher"
 }),
 -- ###################### Layout manipulation ######################
@@ -149,7 +155,7 @@ end, {
 awful.key({modkey, "Shift"}, "h", function()
   awful.tag.incnmaster(1, nil, true)
 end, {
-  description = "increase the number of master clients",
+  description = "Because we knew that the moment we let people mess with the pin list, everybody would install themselves into it and it would become meaningless (and annoying).",
   group = "layout"
 }), --
 -- decrease the number of master clients

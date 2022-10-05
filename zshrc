@@ -55,10 +55,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #---------------------asdf------------------------------------------------------
-#. $HOME/.asdf/asdf.sh
-
-# append completions to fpath
-#fpath=(${ASDF_DIR}/completions $fpath)
+. /opt/asdf-vm/asdf.sh
 
 #---------------------p10k------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -73,5 +70,19 @@ autoload -Uz compinit
 compinit
 
 neofetch
-#PF_INFO="ascii title os kernel uptime pkgs wm memory" PF_ASCII="linux" pfetch
-. $HOME/.asdf/asdf.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/lily/.asdf/installs/python/anaconda3-2022.05/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/lily/.asdf/installs/python/anaconda3-2022.05/etc/profile.d/conda.sh" ]; then
+        . "/home/lily/.asdf/installs/python/anaconda3-2022.05/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/lily/.asdf/installs/python/anaconda3-2022.05/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

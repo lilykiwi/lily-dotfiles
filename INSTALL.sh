@@ -28,7 +28,7 @@ create_link zshrc             ~/.
 create_link p10k.zsh          ~/.
 
 # directories
-# create_link awesome           ~/.config/
+create_link awesome           ~/.config/
 create_link neofetch          ~/.config/
 create_link openbox           ~/.config/
 create_link picom             ~/.config/

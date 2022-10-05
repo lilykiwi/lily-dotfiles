@@ -9,14 +9,35 @@ require("modules.keymap")
 require("modules.menu")
 require("modules.errorHandling")
 require("modules.signals")
+local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
+
+beautiful.init(config_path .. "theme.lua")
+
+local nice = require("nice")
+nice {
+  titlebar_height = 22,
+  titlebar_font = "Ellograph CF 8",
+  win_shade_enabled = false,
+  button_size = 12,
+  titlebar_radius = 12,
+  button_margin_horizontal = 4,
+  titlebar_items = {
+    left = {"close", "minimize", "floating", "ontop"},
+    middle = "title",
+    right = ""
+  }
+}
 
 -- import widgets
+require("widgets.topbar")
 --require("widgets.sideBar")
+require("widgets.desktopBackground")
 
 -- start things!
 require("modules.autostart")
 
-awful.tag.add("alpha", {
+awful.tag.add("primary", {
   screen = s,
   layout = awful.layout.suit.floating,
   selected = true,

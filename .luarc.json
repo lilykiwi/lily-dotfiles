@@ -1,0 +1,26 @@
+{
+    "Lua.diagnostics.globals": [
+        "awesome",
+        "client",
+        "mouse",
+        "mousegrabber",
+        "root",
+        "screen",
+        "tag",
+        "keygrabber"
+    ],
+    "diagnostics.globals": [
+        "awesome",
+        "client",
+        "mouse",
+        "mousegrabber",
+        "root",
+        "screen",
+        "tag"
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "workspace.library": [
+        "~/.local/share/awesome-lib/",
+        "~/.local/share/awesome-emmylua/"
+    ]
+}

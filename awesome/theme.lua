@@ -6,13 +6,14 @@ local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
+local gears = require("gears")
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local config_path = gfs.get_configuration_dir()
 
 local theme = {}
 
-theme.font          = "Proxima Nova 8"
+theme.font          = "Ellograph CF 10"
 
 theme.bg_normal     = "#202124"
 theme.bg_focus      = "#28292D"
@@ -26,16 +27,21 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(16)
-theme.border_width  = dpi(0)
+theme.border_width  = 0
+
+theme.snap_shape = gears.shape.rectangle
+theme.snap_border_width = 4
+theme.snapper_gap = 32
+theme.snap_bg = "#ffffff"
 
 -- Variables set for theming notifications:
-theme.notification_font = "Proxima Nova 8"
+theme.notification_font = "Ellograph CF 10"
 theme.notification_bg = "#28292D"
 theme.notification_fg = theme.fg_normal
 theme.notification_width = dpi(300)
-theme.notification_height = dpi(48)
+--theme.notification_height = dpi(48)
 theme.notification_max_width = dpi(300)
-theme.notification_max_height = dpi(48)
+theme.notification_max_height = dpi(150)
 theme.notification_margin = dpi(10)
 theme.notification_border_color = theme.bg_normal
 theme.notification_border_width = dpi(0)

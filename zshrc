@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 VSCODE=code-insiders
 plugins=(
   git
-  vscode
   asdf
 )
 

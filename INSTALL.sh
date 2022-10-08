@@ -37,34 +37,24 @@ create_link polybar           ~/.config/
 create_link rofi              ~/.config/
 create_link dunst             ~/.config/
 create_link oblogout-lilykiwi ~/.themes/
+create_link macchina          ~/.config/
 
 echo ""
 
-check alacritty
-check openbox
-check neofetch
+check kitty
+check awesome
+check macchina
 check rofi
 check picom
-check polybar
-check dunst
 check yay
-check plank-theme-frost-git
 check lxappearance
-check obconf
-check obmenu-generator
-check oblogout-fork-git
 check colloid-icon-theme-git
+check luv-icon-theme-git
 check orchis-theme-git
 check nm-connection-editor
 check pavucontrol
 check easyeffects
 
 echo ""
-
-echo "--- please install (needs aur) ---"
-echo "alacritty openbox neofetch rofi picom polybar dunst yay plank plank-theme-frost-git lxappearance obconf obmenu-generator oblogout orchis-theme-git nm-connection-editor pavucontrol easyeffects"
-echo "---"
-
-echo ""
-
 echo "done!"
+

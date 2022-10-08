@@ -39,6 +39,9 @@ local systemMenu = wibox.widget{
 -- ─── Callbacks ───────────────────────────────────────────────────────────────
 --
 
+-- ﱛ ﱝ ﱜ
+--   
+
 systemMenu:connect_signal("mouse::enter", function(c)
   local children = c:get_all_children()
   if children then

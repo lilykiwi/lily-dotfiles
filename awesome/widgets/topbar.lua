@@ -4,8 +4,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local gears = require("gears")
 
-local systemMenu = require("widgets.widgets.systemMenu")
-local clock = require("widgets.widgets.clock")
+local systemMenu = require("widgets.submodules.systemMenu")
+local clock = require("widgets.submodules.clock")
 
 --
 -- ─── Widgets ─────────────────────────────────────────────────────────────────

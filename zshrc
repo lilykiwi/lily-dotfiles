@@ -69,7 +69,7 @@ export PATH_TO_FX=/home/char/deps/javafx-sdk-15.0.1/lib
 autoload -Uz compinit
 compinit
 
-neofetch
+macchina
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

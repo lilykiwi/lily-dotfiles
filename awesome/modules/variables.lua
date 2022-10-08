@@ -10,7 +10,7 @@ theme_path = gfs.get_themes_dir()
 local variables = {}
 
 -- This is used later as the default terminal and editor to run.
-variables.terminal = "alacritty"
+variables.terminal = "kitty"
 variables.editor = "code-insiders"
 variables.ulauncher = "ulauncher --hide-window"
 variables.rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"

@@ -26,6 +26,7 @@ git config --global credential.helper store
 create_link alacritty.yml     ~/.
 create_link zshrc             ~/.
 create_link p10k.zsh          ~/.
+create_link kitty.conf        ~/.config/kitty/
 
 # directories
 create_link awesome           ~/.config/

@@ -29,15 +29,15 @@ scrolling:
   multiplier: 10
 
 font:
-  size: 10.0
+  size: 11
   normal:
-    family: Ellograph CF
+    family: CaskaydiaCove Nerd Font
     style: Regular
   bold:
-    family: Ellograph CF Bold
+    family: CaskaydiaCove Nerd Font
     style: Regular
   italic:
-    family: Ellograph CF Bold
+    family: CaskaydiaCove Nerd Font
     style: Italic
 
 # Catppuccin!

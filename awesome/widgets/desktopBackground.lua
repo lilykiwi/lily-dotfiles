@@ -9,7 +9,7 @@ screen.connect_signal("request::wallpaper", function(s)
     screen = s,
     widget = {
       {
-        image  = "/home/lily/Pictures/wallpaper/wallhaven-8x3xjy.jpg",
+        image  = "/home/lily/Obsidian/wallhaven-8x3xjy.jpg",
         resize = true,
         widget = wibox.widget.imagebox,
       },

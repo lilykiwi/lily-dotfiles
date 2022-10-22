@@ -12,7 +12,7 @@ local variables = {}
 -- This is used later as the default terminal and editor to run.
 variables.terminal = "kitty"
 variables.editor = "code-insiders"
-variables.ulauncher = "ulauncher --hide-window"
+variables.ulauncher = "ulauncher --hide-window --no-window-shadow"
 variables.rofi = "rofi -icon-theme 'Colloid-grey-dark' -show drun"
 variables.picom = "picom --xrender-sync-fence"
 variables.screenshot = "shotgun $(hacksaw -f '-i %i -g %g') - | xclip -t 'image/png' -selection clipboard"

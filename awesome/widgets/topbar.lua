@@ -6,6 +6,7 @@ local gears = require("gears")
 
 local systemMenu = require("widgets.submodules.systemMenu")
 local clock = require("widgets.submodules.clock")
+local sound = require("widgets.submodules.sound")
 
 --
 -- ─── Widgets ─────────────────────────────────────────────────────────────────
@@ -33,6 +34,7 @@ wb:setup {
   empty,
   {
     layout = wibox.layout.fixed.horizontal,
+    sound,
     clock,
   }
 }

@@ -369,9 +369,9 @@ end), awful.button({modkey}, 1, function(c)
   c:emit_signal("request::activate", "mouse_click", {
     raise = true
   })
-  awful.mouse.client.move(c)
+  awful.mouse.client.move(c, 16)
 end), awful.button({modkey}, 3, function(c)
-  c:emit_signal("request::activate", "mouse_click", {
+  c:emit_signal("request::activate", {
     raise = true
   })
   awful.mouse.client.resize(c)

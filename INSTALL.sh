@@ -21,23 +21,26 @@ check() {
 git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
 git config --global credential.helper store
 
+mkdir -p ~/.config/ulauncher/user-themes
+
 # function  $1                $2
 # files
-create_link alacritty.yml     ~/.
-create_link zshrc             ~/.
-create_link p10k.zsh          ~/.
-create_link kitty.conf        ~/.config/kitty/
+create_link alacritty.yml      ~/.
+create_link zshrc              ~/.
+create_link p10k.zsh           ~/.
+create_link kitty.conf         ~/.config/kitty/
 
 # directories
-create_link awesome           ~/.config/
-create_link neofetch          ~/.config/
-create_link openbox           ~/.config/
-create_link picom             ~/.config/
-create_link polybar           ~/.config/
-create_link rofi              ~/.config/
-create_link dunst             ~/.config/
-create_link oblogout-lilykiwi ~/.themes/
-create_link macchina          ~/.config/
+create_link awesome            ~/.config/
+create_link neofetch           ~/.config/
+create_link openbox            ~/.config/
+create_link picom              ~/.config/
+create_link polybar            ~/.config/
+create_link rofi               ~/.config/
+create_link dunst              ~/.config/
+create_link oblogout-lilykiwi  ~/.themes/
+create_link macchina           ~/.config/
+create_link ulauncher-lilykiwi ~/.config/ulauncher/user-themes/
 
 echo ""
 

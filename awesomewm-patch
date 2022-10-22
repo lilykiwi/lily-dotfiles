@@ -1,0 +1,42 @@
+diff --git a/lib/awful/mouse/snap.lua b/lib/awful/mouse/snap.lua
+index 0b7a05fa..8e7bdfdc 100644
+--- a/lib/awful/mouse/snap.lua
++++ b/lib/awful/mouse/snap.lua
+@@ -74,11 +74,17 @@ local function show_placeholder(geo)
+ end
+ 
+ local function build_placement(snap, axis)
+-    return aplace.scale
+-        + aplace[snap]
+-        + (
+-            axis and aplace["maximize_"..axis] or nil
+-          )
++    local snapper_gap = beautiful.snapper_gap or 0
++    local geom = aplace.scale
++                        + aplace[snap]
++                        + (
++                           axis and aplace["maximize_"..axis] or nil
++                        )
++    geom.x = geom.x + snapper_gap
++    geom.y = geom.y + snapper_gap
++    geom.width = geom.width - (2 * snapper_gap)
++    geom.width = geom.width - (2 * snapper_gap)
++    return geom
+ end
+ 
+ local function detect_screen_edges(c, snap)
+@@ -211,10 +217,10 @@ function module.snap(c, snap, x, y, fixed_x, fixed_y)
+     local geom = c:geometry()
+     local snapper_gap = beautiful.snapper_gap or 0
+     local edge
+-    geom.x = (x or geom.x) - snapper_gap
+-    geom.y = (y or geom.y) - snapper_gap
+-    geom.width = geom.width + (2 * c.border_width) + (2 * snapper_gap)
+-    geom.height = geom.height + (2 * c.border_width) + (2 * snapper_gap)
++    geom.x = (x or geom.x) + snapper_gap
++    geom.y = (y or geom.y) + snapper_gap
++    geom.width = geom.width + (2 * c.border_width) - (2 * snapper_gap)
++    geom.height = geom.height + (2 * c.border_width) - (2 * snapper_gap)
+ 
+     geom, edge = snap_inside(geom, c.screen.geometry, snap)
+     geom = snap_inside(geom, c.screen.workarea, snap)

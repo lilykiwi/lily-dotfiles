@@ -80,7 +80,7 @@ gdk.init({})
 
 -- => Local settings
 -- ============================================================
-local bottom_edge_height = 3
+local bottom_edge_height = 2
 local double_click_jitter_tolerance = 4
 local double_click_time_window_ms = 250
 local stroke_inner_bottom_lighten_mul = 0.4

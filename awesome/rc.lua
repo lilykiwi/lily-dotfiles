@@ -39,8 +39,20 @@ require("widgets.desktopBackground")
 awful.spawn(variables.picom)
 awful.spawn(variables.ulauncher)
 
-awful.tag.add("primary", {
-  screen = s,
-  layout = awful.layout.suit.floating,
-  selected = true,
-})
+
+screen.connect_signal("request::desktop_decoration", function (s)
+  awful.tag.add("primary", {
+    screen = s,
+    layout = awful.layout.suit.floating,
+    selected = true,
+  })
+end)
+
+awful.screen.connect_for_each_screen(function(s)
+  s.padding = {
+    left = 8,
+    right = 8,
+    top = 8,
+    bottom = 8,
+  }
+end)

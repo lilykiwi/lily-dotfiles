@@ -24,13 +24,13 @@ local systemMenu = wibox.widget{
           },
           layout = wibox.layout.fixed.horizontal,
         },
-        top = 2, bottom = 2, left = 6, right = 6,
+        top = 2, bottom = 2, left = 8, right = 8,
         widget = wibox.container.margin
     },
     bg = '#4C566A', -- basic
     shape_border_width = 1, shape_border_color = '#4C566A', -- outline
     shape = function(cr, width, height) 
-        gears.shape.rounded_rect(cr, width, height, 4)
+        gears.shape.rounded_rect(cr, width, height, 16)
     end,
     widget = wibox.container.background
   },

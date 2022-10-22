@@ -1,0 +1,10 @@
+@import url("../themes/light/reset.css");
+
+.app-box {
+    box-shadow: none;
+    margin: -20px;
+}
+
+.no-window-shadow {
+    margin: -20px;
+}

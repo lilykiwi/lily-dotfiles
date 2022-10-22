@@ -26,12 +26,13 @@ theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = dpi(16)
+theme.useless_gap   = dpi(8)
 theme.border_width  = 0
 
 theme.snap_shape = gears.shape.rectangle
-theme.snap_border_width = 4
-theme.snapper_gap = 32
+theme.snap_border_width = dpi(4)
+
+theme.snapper_gap = dpi(8)
 theme.snap_bg = "#ffffff"
 
 -- Variables set for theming notifications:

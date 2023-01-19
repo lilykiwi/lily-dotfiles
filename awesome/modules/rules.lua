@@ -1,7 +1,6 @@
 -- import awful
 local awful = require("awful")
 local beautiful = require("beautiful")
-local naughty = require("naughty")
 
 -- import local file keymap.lua to variable keymap
 local keymap = require("modules.keymap")

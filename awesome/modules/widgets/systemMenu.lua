@@ -38,6 +38,10 @@ local systemMenu = wibox.widget{
   widget = wibox.container.margin
 }
 
+local systemMenuPopup = require("modules.popups.systemMenu")
+
+systemMenuPopup.visible = false
+
 --
 -- ─── Callbacks ───────────────────────────────────────────────────────────────
 --

@@ -12,10 +12,14 @@ require("modules.signals")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 local variables = require("modules.variables")
+local beautiful = require("beautiful")
+local gfs = require("gears.filesystem")
+local awful = require("awful")
+local config_path = gfs.get_configuration_dir()
 
 beautiful.init(config_path .. "theme.lua")
 
-local nice = require("nice")
+local nice = require("modules.nice")
 nice {
   titlebar_height = 22,
   titlebar_font = "Ellograph CF 8",
@@ -31,14 +35,12 @@ nice {
 }
 
 -- import widgets
-require("widgets.topbar")
---require("widgets.sideBar")
-require("widgets.desktopBackground")
+require("modules.wibar.topbar")
+require("modules.desktopBackground")
 
 -- start things!
 awful.spawn(variables.picom)
 awful.spawn(variables.ulauncher)
-
 
 screen.connect_signal("request::desktop_decoration", function (s)
   awful.tag.add("primary", {

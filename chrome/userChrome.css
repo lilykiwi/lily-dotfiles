@@ -1,0 +1,59 @@
+#TabsToolbar {
+  display: none;
+}
+
+#sidebar-splitter {
+  display: none;
+}
+
+#sidebar-box[sidebarcommand="tabcenter-reborn_ariasuni-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+#sidebar {
+  width: 100%;
+}
+
+#sidebar-box:not([hidden]) {
+  display: block;
+  position: fixed;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  overflow: hidden;
+  transition: min-width 0.1s ease;
+  z-index:1;
+  border-right: 1px solid #0C0C0D;
+}
+
+#sidebar-box:hover {
+  min-width: 15vw !important;
+  max-width: 15vw !important;
+}
+
+#sidebar {
+  height: 100vh;
+}
+
+#sidebar-box:not([hidden]) ~ #appcontent {
+  margin-left: 48px;
+}
+
+#urlbar-results {
+  display: none;
+}
+
+.urlbarView-body-inner {
+  border: none !important;
+}
+
+#urlbar-one-offs-header-label {
+  display: none;
+}
+
+.searchbar-engine-one-off-item {
+  background: #52525E;
+}
+
+#urlbar-search-mode-indicator {
+  display: none !important;
+}

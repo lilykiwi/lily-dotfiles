@@ -1,7 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local cyclefocus = require('cyclefocus')
+local cyclefocus = require('modules.cyclefocus')
 local variables = require("modules.variables")
 
 
@@ -97,23 +97,13 @@ awful.key({modkey}, "u", awful.client.urgent.jumpto, {
   description = "jump to urgent client",
   group = "client"
 }), --
--- go back
--- awful.key({modkey}, "Tab", function()
---  awful.client.focus.history.previous()
---  if client.focus then
---    client.focus:raise()
---  end
--- end, {
---  description = "go back",
---  group = "client"
--- }),
--- modkey+Tab: cycle through all clients.
+-- modkey+Shift+Tab: alt tab
 awful.key({altkey}, "Tab", function(c)
   cyclefocus.cycle({
     modifier = "Alt_L"
   })
 end), --
--- modkey+Shift+Tab: backwards
+-- modkey+Shift+Tab: alt tab (reverse)
 awful.key({altkey, "Shift"}, "Tab", function(c)
   cyclefocus.cycle({
     modifier = "Alt_L"
@@ -208,12 +198,12 @@ end, {
 }), --
 -- ###################### Prompt ######################
 -- run prompt
-awful.key({modkey}, "r", function()
-  awful.screen.focused().mypromptbox:run()
-end, {
-  description = "run prompt",
-  group = "launcher"
-}), --
+--awful.key({modkey}, "r", function()
+--  awful.screen.focused().mypromptbox:run()
+--end, {
+--  description = "run prompt",r
+--  group = "launcher"
+--}), --
 -- launcher
 awful.key({modkey}, "space", function()
   awful.spawn(variables.rofi)

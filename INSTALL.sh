@@ -1,6 +1,6 @@
 dir=$(readlink -f $(dirname $0))
 
-# deletes and symlinks
+# !!! deletes and symlinks !!!
 create_link () {
   if [ -e $2$1 ]
   then
@@ -11,11 +11,6 @@ create_link () {
   mkdir -p $2
   rm -rf $2$1
   ln -s $dir/$1 $2$1
-}
-
-check() {
-  # check whether or not pacman holds this package
-  pacman -Q $1 > /dev/null
 }
 
 git config --global alias.all '!f() { ls -R -d */.git | xargs -I{} bash -c "echo {} && git -C {}/../ $1"; }; f'
@@ -41,22 +36,7 @@ create_link dunst              ~/.config/
 create_link oblogout-lilykiwi  ~/.themes/
 create_link macchina           ~/.config/
 create_link ulauncher-lilykiwi ~/.config/ulauncher/user-themes/
-
-echo ""
-
-check kitty
-check awesome
-check macchina
-check rofi
-check picom
-check yay
-check lxappearance
-check colloid-icon-theme-git
-check luv-icon-theme-git
-check orchis-theme-git
-check nm-connection-editor
-check pavucontrol
-check easyeffects
+create_link chrome             ~/.config/
 
 echo ""
 echo "done!"

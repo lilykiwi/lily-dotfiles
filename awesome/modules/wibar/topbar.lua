@@ -4,9 +4,9 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local gears = require("gears")
 
-local systemMenu = require("widgets.submodules.systemMenu")
-local clock = require("widgets.submodules.clock")
-local sound = require("widgets.submodules.sound")
+local systemMenu = require("modules.widgets.systemMenu")
+local clock = require("modules.widgets.clock")
+local sound = require("modules.widgets.sound")
 
 --
 -- ─── Widgets ─────────────────────────────────────────────────────────────────
@@ -14,7 +14,8 @@ local sound = require("widgets.submodules.sound")
 
 local wb = awful.wibar {
   height = 28,
-  position = "top"
+  position = "top",
+  bg = "#00000000",
 }
 
 local empty = {

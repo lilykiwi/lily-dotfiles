@@ -1,4 +1,4 @@
-# dotfiles
+# lily-dotfiles
 
 Clone the repo then run the install script!
 
@@ -7,6 +7,8 @@ git clone https://github.com/lilykiwi/lily-dotfiles.git
 cd lily-dotfiles
 ./install.sh
 ```
+
+**! ! ! This will delete any files/directories existing at the locations outlined in `./INSTALL.sh` and replace them ! ! !**
 
 ## Adding configs
 
